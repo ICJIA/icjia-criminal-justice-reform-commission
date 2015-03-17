@@ -1,5 +1,10 @@
-title: <%= package.name %>
-url: './'
-company: <%= package.author %>
+
+title: 'Illinois Criminal Justice Comission'
+base: ''
+company: 'Illinois Criminal Justice Comission'
 ga: 'UA-XXXXX-X'
 date: <%= new Date() %>
+debug: TRUE
+breadCrumbs: TRUE
+siteFolder: '/icjiadev/'
+#siteFolder: '/cjillinois2015/'

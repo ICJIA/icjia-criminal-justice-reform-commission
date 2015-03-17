@@ -1,0 +1,20 @@
+Sorted page loop:
+<br/>{{#each keywords}}
+{{#is keyword "news"}}
+{{#withFirst pages 4}}
+
+{{data.slug}}/{{../../relativeLink}}
+<br/>
+
+{{/withFirst}}
+{{/is}}
+{{/each}}
+<br/>
+Unsorted page loop:<br/>
+{{#each pages}}
+
+
+{{data.slug}} -- {{relativeLink}}
+<br/>
+
+{{/each}}

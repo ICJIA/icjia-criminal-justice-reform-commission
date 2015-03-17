@@ -1,0 +1,29 @@
+---
+title: Diagnostics
+navTags:
+- Diagnostics
+---
+
+
+From page:
+<div>
+  {{#each keywords}}
+  {{#is keyword "news"}}
+  {{#withFirst pages 4}}
+
+  <div>
+    <h3><a href="/{{relativeLink}}">{{data.slug}}</a></h3>
+    <p>{{formatDate data.posted "%F"}}</p>
+    <div>
+      /{{relativeLink}}
+    </div>
+    <p><a href="/{{relativeLink}}">more...</a></p>
+  </div>
+
+  {{/withFirst}}
+  {{/is}}
+  {{/each}}
+</div>
+<br/>
+Calling partial:
+{{>diagnostics}}
