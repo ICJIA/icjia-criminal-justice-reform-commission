@@ -1,9 +1,9 @@
-Illinois Criminal Justice Reform Commission Template
-====================================================
+Illinois CJ Reform Commission
+=============================
 
 Basic static site template using [grunt](http://gruntjs.com/) and [assemble](http://assemble.io/).
 
-# Installation
+## Installation
 
 - Download zip or clone into working directory
 - Open terminal window and type:
@@ -16,7 +16,7 @@ bower install
 grunt fonts (to install local versions of google fonts)
 ```
 
-# Development
+## Development
 
 To run project with the built-in dev server and watch task:
 ```bash
@@ -29,7 +29,7 @@ Source code changes are automatically detected and browser page is refreshed via
 
 All edits must be made in /src/ directory. The /out/ directory is deleted before each deployment and re-built from /src/.
 
-# Deployment
+## Deployment
 
 
 To deploy project (optimize images, minify and concatenate html, js, and css):
@@ -39,7 +39,7 @@ grunt deploy
 
 Ready-to-deploy project is in /out/ directory.
 
-# Acknowledgements
+## Acknowledgements
 
 
 Special thanks to:
