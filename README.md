@@ -3,6 +3,10 @@ Illinois CJ Reform Commission
 
 Basic static site template using [grunt](http://gruntjs.com/) and [assemble](http://assemble.io/).
 
+## Pre-installation
+
+Make sure [node](http://www.nodejs.org) and [bower](http://bower.io/) are installed.
+
 ## Installation
 
 - Download zip or clone into working directory
