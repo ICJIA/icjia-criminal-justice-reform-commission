@@ -15,39 +15,39 @@ module.exports = function(grunt) {
 			dist: 'dist'
 		},
 
-		'local-googlefont': {
-			'PT+Mono': {
-				'options': {
-					'family': 'PT+Mono',
-					'sizes': [
-						400
-					],
-					'cssDestination': '<%= build.src %>/styles/google/PT+Mono',
-					'fontDestination': '<%= build.src %>/styles/google/PT+Mono'
-				}
-			},
-			'Oswald': {
-				'options': {
-					'family': 'Oswald',
-					'sizes': [
-						300, 400, 700
-					],
-					'cssDestination': '<%= build.src %>/styles/google/Oswald',
-					'fontDestination': '<%= build.src %>/styles/google/Oswald'
-				}
-			},
-			'Gentium+Book+Basic': {
-				'options': {
-					'family': 'Gentium+Book+Basic',
-					'sizes': [
-						'400', '400italic', '700', '700italic'
-					],
-					'cssDestination': '<%= build.src %>/styles/google/Gentium+Book+Basic',
-					'fontDestination': '<%= build.src %>/styles/google/Gentium+Book+Basic'
-				}
-			},
-
-		},
+		// 'local-googlefont': {
+		// 	'PT+Mono': {
+		// 		'options': {
+		// 			'family': 'PT+Mono',
+		// 			'sizes': [
+		// 				400
+		// 			],
+		// 			'cssDestination': '<%= build.src %>/styles',
+		// 			'fontDestination': '<%= build.src %>/styles'
+		// 		}
+		// 	},
+		// 	'Oswald': {
+		// 		'options': {
+		// 			'family': 'Oswald',
+		// 			'sizes': [
+		// 				300, 400, 700
+		// 			],
+		// 			'cssDestination': '<%= build.src %>/styles',
+		// 			'fontDestination': '<%= build.src %>/styles'
+		// 		}
+		// 	},
+		// 	'Gentium+Book+Basic': {
+		// 		'options': {
+		// 			'family': 'Gentium+Book+Basic',
+		// 			'sizes': [
+		// 				'400', '400italic', '700', '700italic'
+		// 			],
+		// 			'cssDestination': '<%= build.src %>/styles',
+		// 			'fontDestination': '<%= build.src %>/styles'
+		// 		}
+		// 	},
+		//
+		// },
 
 
 
@@ -181,9 +181,9 @@ module.exports = function(grunt) {
 		htmlmin: {
 			dist: {
 				options: {
-					removeCommentsFromCDATA: true,
+					//removeCommentsFromCDATA: true,
 					// https://github.com/yeoman/grunt-usemin/issues/44
-					collapseWhitespace: true,
+					//collapseWhitespace: true,
 					collapseBooleanAttributes: true,
 					//removeAttributeQuotes: true,
 					removeRedundantAttributes: true,
@@ -319,7 +319,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('server', ['connect:devserver', 'watch']);
 	grunt.registerTask('run', ['clean', 'assemble', 'server']);
 	grunt.registerTask('deploy', ['build', 'server']);
-	grunt.registerTask('fonts', ['local-googlefont']);
+	//grunt.registerTask('fonts', ['local-googlefont']);
 
 	grunt.registerTask('deploy:rsync', ['build', 'rsync']);
 	//grunt.registerTask('deploy:gh-pages', ['build','gh-pages']);

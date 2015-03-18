@@ -2,27 +2,53 @@
   font-family: 'Gentium Book Basic';
   font-style: normal;
   font-weight: 400;
-  src: local('Gentium Book Basic'), local('GentiumBookBasic'), url('google/Gentium+Book+Basic/Gentium Book Basic_normal_400_default.woff') format('woff');
+  src: local('Gentium Book Basic'), local('GentiumBookBasic'), url('Gentium Book Basic_normal_400_default.woff') format('woff');
 }
 @font-face {
   font-family: 'Gentium Book Basic';
   font-style: normal;
   font-weight: 700;
-  src: local('Gentium Book Basic Bold'), local('GentiumBookBasic-Bold'), url('google/Gentium+Book+Basic/Gentium Book Basic_normal_700_default.woff') format('woff');
+  src: local('Gentium Book Basic Bold'), local('GentiumBookBasic-Bold'), url('Gentium Book Basic_normal_700_default.woff') format('woff');
 }
 @font-face {
   font-family: 'Gentium Book Basic';
   font-style: italic;
   font-weight: 400;
-  src: local('Gentium Book Basic Italic'), local('GentiumBookBasic-Italic'), url('google/Gentium+Book+Basic/Gentium Book Basic_italic_400_default.woff') format('woff');
+  src: local('Gentium Book Basic Italic'), local('GentiumBookBasic-Italic'), url('Gentium Book Basic_italic_400_default.woff') format('woff');
 }
 @font-face {
   font-family: 'Gentium Book Basic';
   font-style: italic;
   font-weight: 700;
-  src: local('Gentium Book Basic Bold Italic'), local('GentiumBookBasic-BoldItalic'), url('google/Gentium+Book+Basic/Gentium Book Basic_italic_700_default.woff') format('woff');
+  src: local('Gentium Book Basic Bold Italic'), local('GentiumBookBasic-BoldItalic'), url('Gentium Book Basic_italic_700_default.woff') format('woff');
 }
 
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url('Oswald_normal_300_default.woff') format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url('Oswald_normal_400_default.woff') format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url('Oswald_normal_700_default.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Mono'), local('PTMono-Regular'), url('PT Mono_normal_400_default.woff') format('woff');
+}
 
 
 
@@ -44,7 +70,7 @@ a:hover {color: #aaa; text-decoration: none}
 
 #icjia.navbar-default .navbar-brand {
   position: relative; /* Helps us control overlap */
-  padding-left: 10px;
+  padding-left: 60px;
   padding-right: 60px;
   font-size: 16px;
   font-family: 'pt mono', serif;
@@ -59,7 +85,7 @@ a:hover {color: #aaa; text-decoration: none}
     }
 
 
-/*
+
   #icjia.navbar-default .navbar-brand:after {
   content: '\f080';
 
@@ -75,7 +101,7 @@ a:hover {color: #aaa; text-decoration: none}
 -o-transform: scale(-1, 1);
 transform: scale(-1, 1);
   }
-  */
+
 
   #icjia.navbar-default .navbar-brand:hover:after {
 
@@ -164,7 +190,7 @@ hr.style-one {
 }
 
 
-.mosaic-container {margin: 0; padding: 0}
+.mosaic-container {margin: 0; padding: 0; margin-top: 52px}
 
   .mosaic-well {
 
@@ -448,12 +474,14 @@ hr.style-one {
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
 
-    #icjia.navbar-default .navbar-brand {
+    #icjia.navbar-default .navbar-brand {text-align:center; font-size: 16px}
 
+    #icjia.navbar-default .navbar-brand:after {
       display: none;
+    }
 
+    .mosaic-container {margin: 0; padding: 0; margin-top: 141px}
 
-      }
 
 
     .top-nav-collapse {

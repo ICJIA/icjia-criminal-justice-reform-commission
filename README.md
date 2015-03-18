@@ -7,7 +7,7 @@ Basic static site template using [grunt](http://gruntjs.com/) and [assemble](htt
 
 Make sure [node](http://www.nodejs.org) and [bower](http://bower.io/) are installed.
 
-## Installation
+## Project installation
 
 - Download zip or clone into working directory
 - Open terminal window and type:

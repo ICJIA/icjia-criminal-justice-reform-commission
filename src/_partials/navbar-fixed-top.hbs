@@ -7,15 +7,16 @@ component: navbar
       <div id="icjia" class="navbar navbar-default navbar-fixed-top " role="navigation">
           <div class="container-fluid">
               <div class="navbar-header">
-                  <a class="navbar-brand" href="{{assets}}index.html">
-                  The Illinois
+
+                  <a class="navbar-brand commission-name" href="{{assets}}index.html">
+                The Illinois
                   Criminal Justice Reform Commission</a>
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                   </button>
               </div>
               <div class="collapse navbar-collapse navbar-menubuilder">
                   <ul class="nav navbar-nav navbar-right">
-                      <li class=""><a href="{{assets}}index.html">Home</a>
+                      <li class=""><a href="{{site.root}}index.html">Home</a>
                       </li>
 
                       <!-- <li class=""><a class="page-scroll" href="#meetings">Meetings</a>
@@ -24,13 +25,13 @@ component: navbar
                       <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="/about">The Commission</a></li>
-                  <li><a href="/about/meetings.html">Meetings</a></li>
-                  <li><a href="/about/comments.html">Your Comments</a></li>
+                  <li><a href="{{site.root}}about">The Commission</a></li>
+                  <li><a href="{{site.root}}about/meetings.html">Meetings</a></li>
+                  <li><a href="{{site.root}}about/comments.html">Your Comments</a></li>
                   <li class="divider"></li>
                   <li class="dropdown-header">Articles</li>
-                  <li><a href="/research/what-the-research-says.html">What Research Says</a></li>
-                  <li><a href="/research/who-do-we-send-to-prison.html">Who Do We Send To Prison?</a></li>
+                  <li><a href="{{site.root}}research/what-the-research-says.html">What Research Says</a></li>
+                  <li><a href="{{site.root}}research/who-do-we-send-to-prison.html">Who Do We Send To Prison?</a></li>
                 </ul>
               </li>
 
