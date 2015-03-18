@@ -2,290 +2,328 @@
 
 module.exports = function(grunt) {
 
-  require('time-grunt')(grunt);
-  require('load-grunt-tasks')(grunt, {
-    pattern: ['grunt-*', 'assemble']
-  });
+	require('time-grunt')(grunt);
+	require('load-grunt-tasks')(grunt, {
+		pattern: ['grunt-*', 'assemble']
+	});
 
-  grunt.initConfig({
+	grunt.initConfig({
 
-    build: {
-      src: 'src',
-      out: 'out',
-      dist: 'dist'
-    },
+		build: {
+			src: 'src',
+			out: 'out',
+			dist: 'dist'
+		},
 
-    shell: {
-      options: {
-        stdout: true
-      },
-      npm: {
-        command: 'npm install'
-      },
-      bower: {
-        command: 'node ./node_modules/bower/bin/bower install'
-      },
-    },
+		'local-googlefont': {
+			'PT+Mono': {
+				'options': {
+					'family': 'PT+Mono',
+					'sizes': [
+						400
+					],
+					'cssDestination': '<%= build.src %>/styles/google/PT+Mono',
+					'fontDestination': '<%= build.src %>/styles/google/PT+Mono'
+				}
+			},
+			'Oswald': {
+				'options': {
+					'family': 'Oswald',
+					'sizes': [
+						300, 400, 700
+					],
+					'cssDestination': '<%= build.src %>/styles/google/Oswald',
+					'fontDestination': '<%= build.src %>/styles/google/Oswald'
+				}
+			},
+			'Gentium+Book+Basic': {
+				'options': {
+					'family': 'Gentium+Book+Basic',
+					'sizes': [
+						'400', '400italic', '700', '700italic'
+					],
+					'cssDestination': '<%= build.src %>/styles/google/Gentium+Book+Basic',
+					'fontDestination': '<%= build.src %>/styles/google/Gentium+Book+Basic'
+				}
+			},
 
-    watch: {
-      src: {
-        files: [
-          '<%= build.src %>/**/*.{html,htm,js,css}',
-          'test/**/*.{html,htm,js,css}'
-        ],
-        options: {
-          livereload: true
-        }
-      },
-      assemble: {
-        files: [
-          '<%= assemble.pages.src %>',
-          '<%= assemble.options.layoutdir %>/*.hbs',
-          '<%= assemble.options.data %>',
-          '<%= assemble.options.partials %>'
-        ],
-        tasks: ['clean:out', 'assemble:pages'],
-        options: {
-          livereload: true
-        }
-      }
-    },
+		},
 
-    connect: {
-      devserver: {
-        options: {
-          port: 9000,
-          hostname: 'localhost',
-          base: ['<%= build.src %>', '<%= build.out %>', 'test'],
-          livereload: true,
-          open: true
-        }
-      }
-    },
 
-    assemble: {
-      options: {
-        flatten: false,
-        partials: '<%= build.src %>/_partials/*.hbs',
-        layoutdir: '<%= build.src %>/_layouts',
-        data: ['<%= build.src %>/_data/*.{json,yml}', 'package.json'],
-        helpers: ['helper-moment', '<%= build.src %>/helpers/helper-*.js'],
-        assets: '<%= build.out %>/',
-        collections: [{
-          name: 'keywords',
-          inflection: 'keyword',
-          sortby: 'posted',
-          sortorder: 'desc',
-        }]
-      },
-      pages: {
-        options: {
-          layout: 'page.hbs',
-        },
-        expand: true,
-        cwd: '<%= build.src %>/',
-        src: ['**/*.hbs', '!_*/**'],
-        dest: '<%= build.out %>/'
-      }
-    },
 
-    clean: {
-      options: {
-        force: false
-      },
-      out: ['<%= build.out %>/*']
-    },
+		shell: {
+			options: {
+				stdout: true
+			},
+			npm: {
+				command: 'npm install'
+			},
+			bower: {
+				command: 'node ./node_modules/bower/bin/bower install'
+			},
+		},
 
-    copy: {
-      src: {
-        expand: true,
-        cwd: '<%= build.src %>/',
-        src: [
-          '**',
-          '!**/*.hbs',
-          '!_*/**',
-          '.htaccess'
+		watch: {
+			src: {
+				files: [
+					'<%= build.src %>/**/*.{html,htm,js,css}',
+					'test/**/*.{html,htm,js,css}'
+				],
+				options: {
+					livereload: true
+				}
+			},
+			assemble: {
+				files: [
+					'<%= assemble.pages.src %>',
+					'<%= assemble.options.layoutdir %>/*.hbs',
+					'<%= assemble.options.data %>',
+					'<%= assemble.options.partials %>'
+				],
+				tasks: ['clean:out', 'assemble:pages'],
+				options: {
+					livereload: true
+				}
+			}
+		},
 
-        ],
-        dest: '<%= build.out %>/'
-      },
-      fonts: {
-        expand: true,
-        cwd: '<%= build.src %>/_bower_components/bootstrap/fonts/',
-        src: [
-          '**',
-        ],
-        dest: '<%= build.out %>/fonts/'
-      },
-      fontAwesome: {
-        expand: true,
-        cwd: '<%= build.src %>/_bower_components/font-awesome-bower/fonts',
-        src: [
-          '**',
-        ],
-        dest: '<%= build.out %>/fonts/'
-      }
-    },
+		connect: {
+			devserver: {
+				options: {
+					port: 9000,
+					hostname: 'localhost',
+					base: ['<%= build.src %>', '<%= build.out %>', 'test'],
+					livereload: true,
+					open: true
+				}
+			}
+		},
 
-    useminPrepare: {
-      options: {
-        dest: '<%= build.out %>'
-      },
-      html: '<%= build.out %>/index.html'
-    },
+		assemble: {
+			options: {
+				flatten: false,
+				partials: '<%= build.src %>/_partials/*.hbs',
+				layoutdir: '<%= build.src %>/_layouts',
+				data: ['<%= build.src %>/_data/*.{json,yml}', 'package.json'],
+				helpers: ['helper-moment', '<%= build.src %>/helpers/helper-*.js'],
+				assets: '<%= build.out %>/',
+				collections: [{
+					name: 'keywords',
+					inflection: 'keyword',
+					sortby: 'posted',
+					sortorder: 'desc',
+				}]
+			},
+			pages: {
+				options: {
+					layout: 'page.hbs',
+				},
+				expand: true,
+				cwd: '<%= build.src %>/',
+				src: ['**/*.hbs', '!_*/**'],
+				dest: '<%= build.out %>/'
+			}
+		},
 
-    usemin: {
-      options: {
-        dirs: ['<%= build.out %>']
-      },
-      html: ['<%= build.out %>/**/*.html'],
-      css: ['<%= build.out %>/styles/**/*.css']
-    },
+		clean: {
+			options: {
+				force: false
+			},
+			out: ['<%= build.out %>/*']
+		},
 
-    htmlmin: {
-      dist: {
-        options: {
-          removeCommentsFromCDATA: true,
-          // https://github.com/yeoman/grunt-usemin/issues/44
-          collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          //removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          useShortDoctype: true,
-          //removeEmptyAttributes: true,
-          removeOptionalTags: true
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= build.out %>',
-          src: '**/*.html',
-          dest: '<%= build.out %>'
-        }]
-      }
-    },
+		copy: {
+			src: {
+				expand: true,
+				cwd: '<%= build.src %>/',
+				src: [
+					'**',
+					'!**/*.hbs',
+					'!_*/**',
+					'.htaccess'
 
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= build.src %>/img',
-          src: '**/*.{png,jpg,jpeg,gif,webp}',
-          dest: '<%= build.out %>/img'
-        }]
-      }
-    },
+				],
+				dest: '<%= build.out %>/'
+			},
+			fonts: {
+				expand: true,
+				cwd: '<%= build.src %>/_bower_components/bootstrap/fonts/',
+				src: [
+					'**',
+				],
+				dest: '<%= build.out %>/fonts/'
+			},
+			fontAwesome: {
+				expand: true,
+				cwd: '<%= build.src %>/_bower_components/font-awesome-bower/fonts',
+				src: [
+					'**',
+				],
+				dest: '<%= build.out %>/fonts/'
+			}
+		},
 
-    //svgmin: {
-    //  dist: {
-    //    files: [{
-    //      expand: true,
-    //      cwd: '<%%= build.src %>/images',
-    //      src: '{,*/}*.svg',
-    //      dest: '<%%= build.out %>/images'
-    //    }]
-    //  }
-    //},
+		useminPrepare: {
+			options: {
+				dest: '<%= build.out %>'
+			},
+			html: '<%= build.out %>/index.html'
+		},
 
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      files: [
-        'Gruntfile.js',
-        'src/scripts/*.js'
-      ]
-    },
+		usemin: {
+			options: {
+				dirs: ['<%= build.out %>']
+			},
+			html: ['<%= build.out %>/**/*.html'],
+			css: ['<%= build.out %>/styles/**/*.css']
+		},
 
-    rev: {
-      files: {
-        src: [
-          '<%= build.out %>/scripts/{,*/}*.js',
-          '<%= build.out %>/styles/{,*/}*.css'
-        ]
-      }
-    },
+		htmlmin: {
+			dist: {
+				options: {
+					removeCommentsFromCDATA: true,
+					// https://github.com/yeoman/grunt-usemin/issues/44
+					collapseWhitespace: true,
+					collapseBooleanAttributes: true,
+					//removeAttributeQuotes: true,
+					removeRedundantAttributes: true,
+					useShortDoctype: true,
+					//removeEmptyAttributes: true,
+					removeOptionalTags: true
+				},
+				files: [{
+					expand: true,
+					cwd: '<%= build.out %>',
+					src: '**/*.html',
+					dest: '<%= build.out %>'
+				}]
+			}
+		},
 
-    //less: {
-    //  styles: {
-    //    files: {
-    //      '<%= build.out %>/styles/**/*.*': ['<%= build.src %>/styles/**/*.less']
-    //    }
-    //  }
-    //},
+		imagemin: {
+			dist: {
+				files: [{
+					expand: true,
+					cwd: '<%= build.src %>/img',
+					src: '**/*.{png,jpg,jpeg,gif,webp}',
+					dest: '<%= build.out %>/img'
+				}]
+			}
+		},
 
-    //'bower-install': {
-    //  target: {
-    //    html: 'out/index.html' // point to your HTML file.
-    //  }
-    //},
-    //
-    // 'gh-pages': {
-    //   options: {
-    //     base: 'out',
-    //     branch: 'gh-pages'
-    //   },
-    //   src: ['**/*']
-    // },
+		//svgmin: {
+		//  dist: {
+		//    files: [{
+		//      expand: true,
+		//      cwd: '<%%= build.src %>/images',
+		//      src: '{,*/}*.svg',
+		//      dest: '<%%= build.out %>/images'
+		//    }]
+		//  }
+		//},
 
-    rsync: {
-      options: {
-        args: ["--verbose", "--delete"],
-        recursive: true
-      },
-      dist: {
-        options: {
-          src: "<%= build.out %>/",
-          dest: "<%= build.dist %>"
-        }
-      }
-    },
+		jshint: {
+			options: {
+				jshintrc: '.jshintrc'
+			},
+			files: [
+				'Gruntfile.js',
+				'src/scripts/*.js'
+			]
+		},
 
-    mocha: {
-      all: {
-        options: {
-          run: true,
-          urls: [
-            'http://<%= connect.devserver.options.hostname %>:<%= connect.devserver.options.port %>/test.html'
-          ],
-          globals: ['$']
-        }
-      }
-    }
+		rev: {
+			files: {
+				src: [
+					'<%= build.out %>/scripts/{,*/}*.js',
+					'<%= build.out %>/styles/{,*/}*.css'
+				]
+			}
+		},
 
-  });
+		//less: {
+		//  styles: {
+		//    files: {
+		//      '<%= build.out %>/styles/**/*.*': ['<%= build.src %>/styles/**/*.less']
+		//    }
+		//  }
+		//},
 
-  grunt.registerTask('install', ['shell:npm', 'shell:bower']);
+		//'bower-install': {
+		//  target: {
+		//    html: 'out/index.html' // point to your HTML file.
+		//  }
+		//},
+		//
+		// 'gh-pages': {
+		//   options: {
+		//     base: 'out',
+		//     branch: 'gh-pages'
+		//   },
+		//   src: ['**/*']
+		// },
 
-  grunt.registerTask('build', [
-    'clean',
-    'assemble',
-    'copy',
-    'imagemin',
-    'useminPrepare',
-    'concat',
-    'cssmin',
-    'uglify',
-    'rev',
-    'usemin',
-    'htmlmin'
-  ]);
+		rsync: {
+			options: {
+				args: ['--verbose', '--delete'],
+				recursive: true
+			},
+			dist: {
+				options: {
+					src: '<%= build.out %>/',
+					dest: '<%= build.dist %>'
+				}
+			}
+		},
 
-  grunt.registerTask('test', [
-    'clean',
-    'assemble',
-    'connect:devserver',
-    'mocha'
-  ]);
+		mocha: {
+			all: {
+				options: {
+					run: true,
+					urls: [
+						'http://<%= connect.devserver.options.hostname %>:<%= connect.devserver.options.port %>/test.html'
+					],
+					globals: ['$']
+				}
+			}
+		}
 
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
+	});
 
-  grunt.registerTask('server', ['connect:devserver', 'watch']);
-  grunt.registerTask('run', ['clean', 'assemble', 'server']);
-  grunt.registerTask('deploy', ['build', 'server']);
+	grunt.registerTask('install', ['shell:npm', 'shell:bower']);
 
-  grunt.registerTask('deploy:rsync', ['build', 'rsync']);
-  //grunt.registerTask('deploy:gh-pages', ['build','gh-pages']);
-  //grunt.registerTask('deploy', ['deploy:gh-pages']);
-  grunt.registerTask('default', ['run']);
+	grunt.registerTask('build', [
+		'clean',
+		'assemble',
+		'copy',
+		'imagemin',
+		'useminPrepare',
+		'concat',
+		'cssmin',
+		'uglify',
+		'rev',
+		'usemin',
+		'htmlmin'
+	]);
+
+	grunt.registerTask('test', [
+		'clean',
+		'assemble',
+		'connect:devserver',
+		'mocha'
+	]);
+
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-local-googlefont');
+
+	grunt.registerTask('server', ['connect:devserver', 'watch']);
+	grunt.registerTask('run', ['clean', 'assemble', 'server']);
+	grunt.registerTask('deploy', ['build', 'server']);
+	grunt.registerTask('fonts', ['local-googlefont']);
+
+	grunt.registerTask('deploy:rsync', ['build', 'rsync']);
+	//grunt.registerTask('deploy:gh-pages', ['build','gh-pages']);
+	//grunt.registerTask('deploy', ['deploy:gh-pages']);
+	grunt.registerTask('default', ['run']);
 
 };

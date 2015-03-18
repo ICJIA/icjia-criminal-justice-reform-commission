@@ -1,3 +1,33 @@
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gentium Book Basic'), local('GentiumBookBasic'), url('google/Gentium+Book+Basic/Gentium Book Basic_normal_400_default.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Gentium Book Basic Bold'), local('GentiumBookBasic-Bold'), url('google/Gentium+Book+Basic/Gentium Book Basic_normal_700_default.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Gentium Book Basic Italic'), local('GentiumBookBasic-Italic'), url('google/Gentium+Book+Basic/Gentium Book Basic_italic_400_default.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gentium Book Basic';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Gentium Book Basic Bold Italic'), local('GentiumBookBasic-BoldItalic'), url('google/Gentium+Book+Basic/Gentium Book Basic_italic_700_default.woff') format('woff');
+}
+
+
+
+
+
+
 body {
   font-family: 'Gentium Book Basic', serif;
   font-size: 18px;
