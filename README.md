@@ -17,7 +17,7 @@ Make sure [node](http://www.nodejs.org) and [bower](http://bower.io/) are instal
 cd (working directory)
 npm install
 bower install
-grunt fonts (to install local versions of google fonts)
+
 ```
 
 ## Development
