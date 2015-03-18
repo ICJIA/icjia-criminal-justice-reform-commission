@@ -6,7 +6,10 @@ body {
 a {color: #f44013 }
 a:hover {color: #aaa; text-decoration: none}
 
+.breadcrumb {background-color: #fff !important}
 
+.pageTop {margin-top: 51px; border-top: 5px solid #f44013;}
+.pageContent {margin-top: 15px}
 
 
 #icjia.navbar-default .navbar-brand {
@@ -401,4 +404,29 @@ hr.style-one {
   border-bottom: 1px solid #333;
   font-family: 'Oswald', sans-serif;
   padding-bottom: 5px;
+}
+
+
+
+
+
+@media(max-width:767px) {
+    #icjia.navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    #icjia.navbar-default .navbar-brand {
+
+      display: none;
+
+
+      }
+
+
+    .top-nav-collapse {
+        padding: 0;
+    }
 }

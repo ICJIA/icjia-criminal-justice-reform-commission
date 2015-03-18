@@ -2,13 +2,13 @@
 layout: default.hbs
 ---
 
-<div class="container myPage">
-	<article id="page" class="page">
-		<div class="page-header">
-	  		<h1>{{title}}</h1>
-		</div>
-		<div class="page-content">
-			{{> body }}
-		</div>
-	</article>
+<!-- <div style="font-size: 14px; margin-top: 15px; margin-bottom: 20px;  float:right;">
+	{{constructBreadCrumb2 this.page.dirname slug this.page.assets}}
+</div>
+<div style="clear: both"></div> -->
+
+<div class="pageTop">
+
+		{{> body }}
+	
 </div>
