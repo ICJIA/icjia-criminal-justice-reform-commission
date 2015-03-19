@@ -6,7 +6,7 @@ ga: 'UA-XXXXX-X'
 date: <%= new Date() %>
 debug: TRUE
 breadCrumbs: TRUE
-root: '/'
-domain: '127.0.0.1:9000'
-#root: '/icjiadev/'
-#domain: 'http://www.icjia.org'
+#root: '/'
+#domain: '127.0.0.1:9000'
+root: '/icjiadev/'
+domain: 'http://www.icjia.org'

@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'Gentium Book Basic';
   font-style: normal;
   font-weight: 400;
@@ -50,7 +50,7 @@
   src: local('PT Mono'), local('PTMono-Regular'), url('PT Mono_normal_400_default.woff') format('woff');
 }
 
-
+*/
 
 
 
@@ -273,8 +273,8 @@ hr.style-one {
 
 
   .mosaic-well .mosaic-short-headline {
-      padding: 40px 40px;
-      font-size: 30px;
+      padding: 170px 40px;
+      font-size: 26px;
       line-height: 1.15em;
       word-spacing: -1px;
       letter-spacing: -.4px;
@@ -307,7 +307,7 @@ hr.style-one {
 
 
   .mosaic-well .mosaic-tall-headline {
-      padding: 60px 40px;
+      padding: 20px 40px;
       font-size: 44px;
       line-height: 1.15em;
       word-spacing: -1px;
@@ -315,6 +315,12 @@ hr.style-one {
       max-width: 500px;
       text-transform: uppercase;
       font-family: 'Oswald', sans-serif;
+  }
+
+  .mosaic-well .mosaic-tall-headline.dark {
+
+
+
   }
 
   .mosaic-well .mosaic-tall-date {
@@ -349,7 +355,9 @@ hr.style-one {
   #commission h2 {
     color: #aaa;
     opacity: 0.3;
-    font: bold 144px/1 'oswald';
+    /*font: bold 144px/1 'oswald';*/
+    font-size: 90px;
+    font-family: 'Oswald';
     position: absolute;
     text-transform: uppercase;
     top: 30px;
