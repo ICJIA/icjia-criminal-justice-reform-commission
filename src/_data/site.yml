@@ -1,12 +1,11 @@
 
-title: 'Illinois Criminal Justice Comission'
-base: ''
-company: 'Illinois Criminal Justice Comission'
-ga: 'UA-XXXXX-X'
+title: 'Illinois Criminal Justice Reform Comission'
+company: 'Illinois Criminal Justice Reform Comission'
 date: <%= new Date() %>
 debug: TRUE
-breadCrumbs: TRUE
-#root: '/'
-#domain: '127.0.0.1:9000'
+
 root: '/icjiadev/'
 domain: 'http://www.icjia.org'
+
+# root: '/'
+# domain: '127.0.0.1:9000'

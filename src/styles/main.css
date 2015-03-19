@@ -68,6 +68,9 @@ a:hover {color: #aaa; text-decoration: none}
 .pageContent {margin-top: 15px}
 
 
+ul.commission-members  li {padding-top: 10px}
+
+
 #icjia.navbar-default .navbar-brand {
   position: relative; /* Helps us control overlap */
   padding-left: 60px;
@@ -455,6 +458,8 @@ hr.style-one {
 }
 
 .ghost-button.long {width: 200px; font-size: 12px}
+
+.ghost-button.xlong {width: 300px; font-size: 12px}
 
 
 
