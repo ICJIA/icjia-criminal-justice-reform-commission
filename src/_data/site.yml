@@ -1,11 +1,11 @@
 
-title: 'Illinois Criminal Justice Reform Comission'
-company: 'Illinois Criminal Justice Reform Comission'
+title: 'Illinois Criminal Justice Reform Commission'
+company: 'Illinois Criminal Justice Reform Commission'
 date: <%= new Date() %>
 debug: TRUE
 
 root: '/icjiadev/'
 domain: 'http://www.icjia.org'
 
-# root: '/'
-# domain: '127.0.0.1:9000'
+root: '/'
+domain: '127.0.0.1:9000'
