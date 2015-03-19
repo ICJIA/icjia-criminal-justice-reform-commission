@@ -5,3 +5,4 @@ src/_bower_components
 dist/
 .DS_Store
 notes
+.tmp
