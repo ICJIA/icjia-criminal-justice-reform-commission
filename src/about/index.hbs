@@ -90,7 +90,8 @@ navSort: 100
 <script>
 
 $( document ).ready(function() {
-  $( "#exec-button" ).click(function() {
+  $( "#exec-button" ).click(function(e) {
+    e.preventDefault();
     $('#exec-response').html('TO DO: Link to the PDF of the exec order.')
   });
 });

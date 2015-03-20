@@ -7,5 +7,5 @@ debug: TRUE
 root: '/icjiadev/'
 domain: 'http://www.icjia.org'
 
-root: '/'
-domain: '127.0.0.1:9000'
+# root: '/'
+# domain: '127.0.0.1:9000'
