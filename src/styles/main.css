@@ -227,11 +227,11 @@ hr.style-one {
     filter: grayscale(100%);
     filter: gray;
     filter: grayscale(1);
-    webkit-transition: all 0.15s ease-in-out;
+    /*webkit-transition: all 0.15s ease-in-out;
     -moz-transition: all 0.15s ease-in-out;
     -o-transition: all 0.15s ease-in-out;
     -webkit-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;*/
     position: relative;
 
   }
@@ -247,30 +247,30 @@ hr.style-one {
     filter: grayscale(0%);
     filter: none;
     filter: grayscale(0);
-    webkit-transition: all 0.15s ease-in-out;
+    /*webkit-transition: all 0.15s ease-in-out;
     -moz-transition: all 0.15s ease-in-out;
     -o-transition: all 0.15s ease-in-out;
     -webkit-transition: all 0.15s ease-in-out;
-    transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;*/
 
   }
 
   .mosaic-well .overlay a {
       color: #fff;
-      webkit-transition: all 0.15s ease-in-out;
+      /*webkit-transition: all 0.15s ease-in-out;
       -moz-transition: all 0.15s ease-in-out;
       -o-transition: all 0.15s ease-in-out;
       -webkit-transition: all 0.15s ease-in-out;
-      transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;*/
   }
 
   .mosaic-well .overlay:hover a {
       color: #f44013;
-      webkit-transition: all 0.15s ease-in-out;
+      /*webkit-transition: all 0.15s ease-in-out;
       -moz-transition: all 0.15s ease-in-out;
       -o-transition: all 0.15s ease-in-out;
       -webkit-transition: all 0.15s ease-in-out;
-      transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;*/
   }
 
 
@@ -480,6 +480,13 @@ hr.style-one {
 
 
 @media(max-width:767px) {
+
+  .mosaic-well .mosaic-short-headline {
+      padding: 150px 40px;
+      font-size: 24px;
+      
+  }
+
     #icjia.navbar {
         padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -496,7 +503,7 @@ hr.style-one {
     .mosaic-container {margin: 0; padding: 0; margin-top: 141px}
 
 
-
+  .pageTop {margin-top: 120px; /*border-top: 5px solid #f44013;*/}
     .top-nav-collapse {
         padding: 0;
     }
