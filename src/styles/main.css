@@ -170,7 +170,11 @@ transform: scale(-1, 1);
 
 
 
-
+.dropdown-menu {
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
 
 
 
@@ -484,7 +488,7 @@ hr.style-one {
   .mosaic-well .mosaic-short-headline {
       padding: 150px 40px;
       font-size: 24px;
-      
+
   }
 
     #icjia.navbar {
