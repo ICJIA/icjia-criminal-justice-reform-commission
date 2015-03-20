@@ -1,6 +1,6 @@
 
-title: 'Illinois Criminal Justice Reform Commission'
-company: 'Illinois Criminal Justice Reform Commission'
+title: 'Illinois State Commission on Criminal Justice and Sentencing Reform'
+company: 'Illinois State Commission on Criminal Justice and Sentencing Reform'
 date: <%= new Date() %>
 debug: TRUE
 

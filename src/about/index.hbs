@@ -26,12 +26,12 @@ navSort: 100
 
     </style>
     <div class="article">
-      <span class="article-date">The Illinois Criminal Justice Reform Commission</span>
+      <span class="article-date">{{site.title}}</span>
     <h1 class="article-headline">Commission Members</h1>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed ante quam. Etiam at iaculis urna. Nulla molestie, tellus a ultricies fermentum, augue elit rhoncus purus, eget hendrerit sem libero maximus eros. Ut condimentum dui et viverra tempus dunt, sit amet eleifend erat finibus. Suspendisse posuere sapien ut ipsum commodo, id feugiat lacus scelerisque.</p>
 <div class="text-center">
-    <a class="ghost-button xlong" id="exec-button" style="margin-top: 25px" href="#"><i class="fa fa-file-pdf-o"></i> Read the Executive Order</a>
+    <a class="ghost-button xlong" href="{{assets}}pdf/ExecutiveOrder2015-14.pdf" target="_blank" style="margin-top: 25px" href="#"><i class="fa fa-file-pdf-o"></i> Read the Executive Order</a>
 
     <div id="exec-response" style="margin-top: 20px; font-size: 16px; color: #f44013"></div>
 </div>
@@ -84,17 +84,3 @@ navSort: 100
   <div style="height: 500px"></div>
 </div>
 </div>
-
-
-
-<script>
-
-$( document ).ready(function() {
-  $( "#exec-button" ).click(function(e) {
-    e.preventDefault();
-    $('#exec-response').html('TO DO: Link to the PDF of the exec order.')
-  });
-});
-
-
-</script>
