@@ -89,12 +89,14 @@ Ready-to-deploy project is in /out/ directory.
 Special thanks to:
 - https://github.com/Hypercubed/assemble-bootstrap-template
 - https://www.themarshallproject.org/
+- https://css-tricks.com/reading-position-indicator/
 
 Stock photography from:
 - https://stocksnap.io/
 - https://unsplash.com/
+- http://www.istockphoto.com
 
-[Google Fonts](http://fonts.google.com) used:
+[Google Fonts](http://fonts.google.com):
 - [Gentium Book Basic](http://www.google.com/fonts/specimen/Gentium+Book+Basic)
 - [Oswald](https://www.google.com/fonts/specimen/Oswald)
 - [PT Mono](http://www.google.com/fonts/specimen/PT+Mono)
