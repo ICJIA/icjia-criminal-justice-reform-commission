@@ -227,11 +227,11 @@ hr.style-one {
     filter: grayscale(100%);
     filter: gray;
     filter: grayscale(1);
-    webkit-transition: all 0.45s ease-in-out;
-    -moz-transition: all 0.45s ease-in-out;
-    -o-transition: all 0.45s ease-in-out;
-    -webkit-transition: all 0.45s ease-in-out;
-    transition: all 0.45s ease-in-out;
+    webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
     position: relative;
 
   }
@@ -247,30 +247,30 @@ hr.style-one {
     filter: grayscale(0%);
     filter: none;
     filter: grayscale(0);
-    webkit-transition: all 0.45s ease-in-out;
-    -moz-transition: all 0.45s ease-in-out;
-    -o-transition: all 0.45s ease-in-out;
-    -webkit-transition: all 0.45s ease-in-out;
-    transition: all 0.45s ease-in-out;
+    webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
 
   }
 
   .mosaic-well .overlay a {
       color: #fff;
-      webkit-transition: all 0.25s ease-in-out;
-      -moz-transition: all 0.25s ease-in-out;
-      -o-transition: all 0.25s ease-in-out;
-      -webkit-transition: all 0.25s ease-in-out;
-      transition: all 0.25s ease-in-out;
+      webkit-transition: all 0.15s ease-in-out;
+      -moz-transition: all 0.15s ease-in-out;
+      -o-transition: all 0.15s ease-in-out;
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
   }
 
   .mosaic-well .overlay:hover a {
       color: #f44013;
-      webkit-transition: all 0.25s ease-in-out;
-      -moz-transition: all 0.25s ease-in-out;
-      -o-transition: all 0.25s ease-in-out;
-      -webkit-transition: all 0.25s ease-in-out;
-      transition: all 0.25s ease-in-out;
+      webkit-transition: all 0.15s ease-in-out;
+      -moz-transition: all 0.15s ease-in-out;
+      -o-transition: all 0.15s ease-in-out;
+      -webkit-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
   }
 
 
