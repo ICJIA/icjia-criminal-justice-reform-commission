@@ -17,7 +17,7 @@ Once the deployment task is complete, you'll manually FTP the project from the *
 
 Make sure [node](http://www.nodejs.org) and [bower](http://bower.io/) are installed. For more information or questions about installation, please contact me.
 
-Once node is installed, you'll want to make sure that Grunt's command line interface (CLI) is installed globally:
+Once node and bower installed, you'll want to make sure that Grunt's command line interface (CLI) is installed globally:
 
 ```bash
 npm install -g grunt-cli
