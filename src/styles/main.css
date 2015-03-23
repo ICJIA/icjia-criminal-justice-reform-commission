@@ -416,7 +416,7 @@ hr.style-one {
 
 .the-fine-print {font-family: 'Oswald', sans-serif}
 
-
+h2.article-subhead {margin-top: 10px; font-weight: 700; font-family: 'Oswald', sans-serif;}
 .article-well {
 
     float: left;
