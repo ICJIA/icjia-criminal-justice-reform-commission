@@ -40,15 +40,6 @@ bower install
 
 ## Development
 
-Change the domain and root in /src/_data/site.yml. If you're working from a local machine, you'll want to make sure the domain and root are set for the development environment and that the deployment targets are commented out:
-
-```bash
-#root: '/icjiadev/'
-#domain: 'http://www.icjia.org'
-
-root: '/'
-domain: '127.0.0.1:9000'
-```
 
 To run project with the built-in dev server and watch task:
 ```bash
@@ -66,15 +57,14 @@ All edits must be made in /src/ directory. The /out/ directory is deleted before
 
 ## Deployment
 
-Change the domain and root in /src/_data/site.yml for your deployment target and make sure the development domain and root are commented out:
+Make sure the deployment domain and root are correct in **/_data/site.yml/**:
 
 ```bash
 root: '/icjiadev/'
 domain: 'http://www.icjia.org'
-
-# root: '/'
-# domain: '127.0.0.1:9000'
 ```
+
+The root and domain are used to generate the canonical metatag for each page.
 
 To deploy project (optimize images, minify and concatenate html, js, and css):
 ```bash
