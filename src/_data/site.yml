@@ -4,7 +4,7 @@ company: 'Illinois State Commission on Criminal Justice and Sentencing Reform'
 date: <%= new Date() %>
 debug: TRUE
 
-root: '/icjiadev/'
+root: '/cjreform2015/'
 domain: 'http://www.icjia.org'
 #
 # root: '/'
