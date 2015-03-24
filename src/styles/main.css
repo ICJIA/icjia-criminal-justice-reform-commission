@@ -488,7 +488,7 @@ h2.article-subhead {margin-top: 10px; font-weight: 700; font-family: 'Oswald', s
 
 
 
-@media(max-width:767px) {
+@media(max-width:768px) {
 
   .mosaic-well .mosaic-short-headline {
       padding: 150px 40px;
@@ -513,6 +513,7 @@ h2.article-subhead {margin-top: 10px; font-weight: 700; font-family: 'Oswald', s
 
 
   .pageTop {margin-top: 120px; /*border-top: 5px solid #f44013;*/}
+  progress {top: 121px}
     .top-nav-collapse {
         padding: 0;
     }
