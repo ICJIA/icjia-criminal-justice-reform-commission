@@ -404,14 +404,16 @@ hr.style-one {
 .news-item h2 {margin-bottom: 15px}
 .news-item.first {margin-top: 0px}
 .news-item.first h2 {padding: 0; margin-top: 0}
-.news-item .news-date {color: #f44013; font-family: 'pt mono', serif;}
-.news-item p {margin-left: 20px}
+.news-item .news-date {color: #999; font-family: 'pt mono', serif; font-size: 14px}
+.news-item .news-category {color: #f44013; font-family: 'pt mono', serif; font-size: 16px}
+.news-item p {margin-top: 10px; margin-left: 20px}
 
 .article {margin-top: 50px}
 .article-headline {margin-top: 10px; font-size: 48px; font-weight: 700; font-family: 'Oswald', sans-serif;}
 .article-authors {font-family: 'PT Mono', sans-serif; color: #999}
 .article-content {margin-top: 30px; margin-left: 25px; font-size: 22px}
 .article-date {color: #f44013; font-family: 'pt mono', serif;}
+
 
 
 .the-fine-print {font-family: 'Oswald', sans-serif}
@@ -597,6 +599,13 @@ progress::-webkit-progress-bar {
   display: block;
   height: inherit;
 }
+
+/* Readmore styles */
+article.expander {margin-top: 10px; margin-left: 20px; border-left: 0px solid #ccc}
+a[data-readmore-toggle]{
+  margin-left: 20px;
+}
+
 
 
 

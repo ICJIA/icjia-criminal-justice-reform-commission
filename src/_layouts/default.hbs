@@ -2,12 +2,15 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" ng-app="mainApp"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>{{site.title}}</title>
-		<meta name="description" content="">
+		<meta name="description" content="{{description}}">
+		<meta name="keywords" content="{{site.keywords}}">
+		<meta name="date" content="{{moment dateCreated format ="dddd, DD MMMM YYYY" }}">
+
 		<meta name="viewport" content="width=device-width">
 
 		<link rel="canonical" href="{{constructCanonical site.domain site.root this.page.dest}}" />
@@ -55,6 +58,7 @@
 		<script src="{{assets}}_bower_components/jquery-easing-original/jquery.easing.1.3.js"></script>
 		<script src="{{assets}}_bower_components/highcharts-release/highcharts.src.js"></script>
 		<script src="{{assets}}_bower_components/highcharts-release/modules/exporting.js"></script>
+		<script src="{{assets}}_bower_components/readmore/readmore.js"></script>
 
 		<!-- endbuild -->
 
@@ -73,7 +77,17 @@
     <!-- build:js(src) {{assets}}scripts/main.js -->
     <script src="{{assets}}scripts/main.js"></script>
 		<script src="{{assets}}scripts/highcharts-data.js"></script>
+
     <!-- endbuild -->
+
+<!-- icjia:
+
+				Page created: {{moment dateCreated format ="dddd, DD MMMM YYYY HH:mm:ss"}}
+				Last updated: {{moment  format ="dddd, DD MMMM YYYY HH:mm:ss" }}
+
+-->
+
+
 
 </body>
 </html>

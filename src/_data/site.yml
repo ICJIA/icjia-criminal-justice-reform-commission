@@ -1,8 +1,14 @@
 
 title: 'Illinois State Commission on Criminal Justice and Sentencing Reform'
 company: 'Illinois State Commission on Criminal Justice and Sentencing Reform'
-date: <%= new Date() %>
+dateCreated: <%= new Date() %>
 debug: TRUE
+keywords:
+  - 'Illinois'
+  - 'Criminal Justice'
+  - 'Sentencing Reform'
+  - 'Illinois Criminal Justice Information Authority'
+  - 'Illinois State Commission on Criminal Justice and Sentencing Reform'
 
 root: '/cjreform2015/'
 domain: 'http://www.icjia.org'
