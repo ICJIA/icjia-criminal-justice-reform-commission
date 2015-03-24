@@ -610,7 +610,7 @@ a[data-readmore-toggle]{
 
 
 
-/* Collapse navbar on ipad/ipad mini */
+/* Collapse navbar on ipad/ipad mini
 
 @media (max-width: 1024px) {
     .navbar-header {
@@ -641,11 +641,11 @@ a[data-readmore-toggle]{
         float: none;
         margin: 15px 0;
     }
-    /* since 3.1.0 */
+    
     .navbar-collapse.collapse.in {
         display: block!important;
     }
     .collapsing {
         overflow: hidden!important;
     }
-}
+} */
