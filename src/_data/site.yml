@@ -9,9 +9,19 @@ keywords:
   - 'Sentencing Reform'
   - 'Illinois Criminal Justice Information Authority'
   - 'Illinois State Commission on Criminal Justice and Sentencing Reform'
+author: 'Illinois State Commission on Criminal Justice and Sentencing Reform'
+
+description: "The website for the Illinois State Commission on Criminal Justice and Sentencing Reform"
+
+#Facebook
+facebokContentType: 'article'
+facebookAppId: '808662262561066'
+facebookImage: 'http://www.icjia.state.il.us/cjreform2015/img/icjia-default.jpg'
+facebookAuthorURL: 'https://www.facebook.com/ICJIA'
 
 root: '/cjreform2015/'
 domain: 'http://www.icjia.org'
-#
+
+
 # root: '/'
 # domain: '127.0.0.1:9000'

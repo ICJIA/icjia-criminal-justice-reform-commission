@@ -7,11 +7,22 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>{{site.title}}</title>
-		<meta name="description" content="{{description}}">
-		<meta name="keywords" content="{{site.keywords}}">
+		<meta name="description" content="{{#if description}}{{description}}{{else}}{{site.description}}{{/if}}">
+		<meta name="keywords" content="{{#if keywords}}{{this.page.keywords}}{{else}}{{site.keywords}}{{/if}}">
 		<meta name="date" content="{{moment dateCreated format ="dddd, DD MMMM YYYY" }}">
-
 		<meta name="viewport" content="width=device-width">
+
+		<!-- Facebook specific metatags -->
+			<meta property="og:title" content="{{#if slug}}{{slug}}{{else}}{{site.title}}{{/if}}" />
+			<meta property="og:site_name" content="{{site.title}}"/>
+			<meta property="og:url" content="{{constructCanonical site.domain site.root this.page.dest}}" />
+			<meta property="og:description" content="{{#if description}}{{description}}{{else}}{{site.description}}{{/if}}" />
+			<meta property="fb:app_id" content="{{site.facebookAppId}}" />
+			<meta property="og:type" content="{{site.facebokContentType}}" />
+			<meta property="og:locale" content="en_US" />
+			<meta property="article:author" content="{{#if facebookAuthorURL}}{{facebookAuthorURL}}{{else}}{{site.facebookAuthorURL}}{{/if}}" />
+			<meta property="og:image" content="{{#if facebookImage}}{{facebookImage}}{{else}}{{site.facebookImage}}{{/if}}" />
+		<!-- // Facebook specific metatags -->
 
 		<link rel="canonical" href="{{constructCanonical site.domain site.root this.page.dest}}" />
 
@@ -41,25 +52,16 @@
 
 	</head>
 	<body>
-<!-- Facebook Integration
-	<script>
-window.fbAsyncInit = function() {
-	FB.init({
-		appId      : '808662262561066',
-		xfbml      : true,
-		version    : 'v2.2'
-	});
-};
+<!-- Facebook Integration-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=808662262561066&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-(function(d, s, id){
-	var js, fjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) {return;}
-	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/sdk.js";
-	fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
--->
 
 
 		<!--[if lt IE 10]>
@@ -98,6 +100,7 @@ window.fbAsyncInit = function() {
     <!-- build:js(src) {{assets}}scripts/main.js -->
     <script src="{{assets}}scripts/main.js"></script>
 		<script src="{{assets}}scripts/highcharts-data.js"></script>
+		<script src="{{assets}}scripts/google.js"></script>
 
     <!-- endbuild -->
 
