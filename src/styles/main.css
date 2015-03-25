@@ -184,7 +184,6 @@ transform: scale(-1, 1);
 
 
 
-
 .bigpix {margin: 0; padding: 0;}
 
 /* Gradient color1 - color2 - color1 */
@@ -602,10 +601,11 @@ progress::-webkit-progress-bar {
 }
 
 /* Readmore styles */
-article.expander {margin-top: 10px; margin-left: 20px; border-left: 0px solid #ccc}
+article.expander {color: #555; margin-top: 10px; margin-left: 20px; font-size: 14px; }
 a[data-readmore-toggle]{
   margin-left: 20px;
 }
+.expand-style {text-transform: uppercase; font-family: "Oswald", serif; font-size: 11px}
 
 
 
@@ -641,7 +641,7 @@ a[data-readmore-toggle]{
         float: none;
         margin: 15px 0;
     }
-    
+
     .navbar-collapse.collapse.in {
         display: block!important;
     }
