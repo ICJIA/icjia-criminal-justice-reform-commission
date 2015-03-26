@@ -174,7 +174,7 @@ function progressBarInit() {
 
 
 
-/* Custom function for Facebook sharewindow */
+/* Custom function for Facebook sharewindow version 1.0
 function fbShare(url, title, descr, winWidth, winHeight) {
 	var winTop = (screen.height / 2) - (winHeight / 2);
 	var winLeft = (screen.width / 2) - (winWidth / 2);
@@ -183,4 +183,16 @@ function fbShare(url, title, descr, winWidth, winHeight) {
 		'&p[summary]=' + descr + '&p[url]=' + url,
 		'sharer', 'top=' + winTop + ',left=' + winLeft +
 		',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+}*/
+
+
+/* Custom function for Facebook sharewindow version 2.0 */
+
+function fbs_click(u, t) {
+	//u = location.href;
+	//t = document.title;
+	window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) +
+		'&t=' + encodeURIComponent(t), 'sharer',
+		'toolbar=0,status=0,width=626,height=436');
+	return false;
 }

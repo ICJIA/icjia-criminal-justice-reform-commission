@@ -62,6 +62,16 @@ body {
 a {color: #f44013 }
 a:hover {color: #aaa; text-decoration: none}
 
+a.social.twitter {color: #aaa}
+a.social.twitter:hover {color: #4099FF}
+
+a.social.facebook {color: #aaa}
+a.social.facebook:hover {color: #3B5998}
+
+a.social.email {color: #aaa}
+a.social.email:hover {color: #f44013}
+
+
 .breadcrumb {background-color: #fff !important}
 
 .pageTop {margin-top: 51px; /*border-top: 5px solid #f44013;*/}
