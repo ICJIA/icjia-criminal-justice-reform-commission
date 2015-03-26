@@ -13,14 +13,15 @@ author: 'Illinois State Commission on Criminal Justice and Sentencing Reform'
 
 description: "The website for the Illinois State Commission on Criminal Justice and Sentencing Reform"
 
-#Facebook
+#Social media
 facebokContentType: 'article'
 facebookAppId: '808662262561066'
-facebookImage: 'http://www.icjia.state.il.us/cjreform2015/img/icjia-default.jpg'
 facebookAuthorURL: 'https://www.facebook.com/ICJIA'
 
+socialMediaImage: 'http://www.icjia.state.il.us/cjreform2015/img/icjia-default.jpg'
+
 root: '/cjreform2015/'
-domain: 'http://www.icjia.org'
+domain: 'http://www.icjia.state.il.us'
 
 
 # root: '/'

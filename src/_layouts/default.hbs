@@ -12,17 +12,27 @@
 		<meta name="date" content="{{moment dateCreated format ="dddd, DD MMMM YYYY" }}">
 		<meta name="viewport" content="width=device-width">
 
-		<!-- Facebook specific metatags -->
-			<meta property="og:title" content="{{#if slug}}{{slug}}{{else}}{{site.title}}{{/if}}" />
-			<meta property="og:site_name" content="{{site.title}}"/>
-			<meta property="og:url" content="{{constructCanonical site.domain site.root this.page.dest}}" />
-			<meta property="og:description" content="{{#if description}}{{description}}{{else}}{{site.description}}{{/if}}" />
-			<meta property="fb:app_id" content="{{site.facebookAppId}}" />
-			<meta property="og:type" content="{{site.facebokContentType}}" />
-			<meta property="og:locale" content="en_US" />
-			<meta property="article:author" content="{{#if facebookAuthorURL}}{{facebookAuthorURL}}{{else}}{{site.facebookAuthorURL}}{{/if}}" />
-			<meta property="og:image" content="{{#if facebookImage}}{{facebookImage}}{{else}}{{site.facebookImage}}{{/if}}" />
-		<!-- // Facebook specific metatags -->
+		<!-- Facebook metatags -->
+				<meta property="og:title" content="{{#if slug}}{{slug}}{{else}}{{site.title}}{{/if}}" />
+				<meta property="og:site_name" content="{{site.title}}"/>
+				<meta property="og:url" content="{{constructCanonical site.domain site.root this.page.dest}}" />
+				<meta property="og:description" content="{{#if description}}{{description}}{{else}}{{site.description}}{{/if}}" />
+				<meta property="fb:app_id" content="{{site.facebookAppId}}" />
+				<meta property="og:type" content="{{site.facebokContentType}}" />
+				<meta property="og:locale" content="en_US" />
+				<meta property="article:author" content="{{#if facebookAuthorURL}}{{facebookAuthorURL}}{{else}}{{site.facebookAuthorURL}}{{/if}}" />
+				<meta property="og:image" content="{{#if socialMediaImage}}{{socialMediaImage}}{{else}}{{site.socialMediaImage}}{{/if}}" />
+		<!-- // Facebook metatags -->
+
+
+		<!-- Twitter metatags -->
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="@ICJIA_Illinois" />
+			<meta name="twitter:title" content="{{#if slug}}{{slug}}{{else}}{{site.title}}{{/if}}" />
+			<meta name="twitter:description" content="{{#if description}}{{description}}{{else}}{{site.description}}{{/if}}" />
+			<meta name="twitter:image" content="{{#if socialMediaImage}}{{socialMediaImage}}{{else}}{{site.socialMediaImage}}{{/if}}" />
+			<meta name="twitter:url" content="{{constructCanonical site.domain site.root this.page.dest}}" />
+		<!-- //Twitter metatags -->
 
 		<link rel="canonical" href="{{constructCanonical site.domain site.root this.page.dest}}" />
 
@@ -58,7 +68,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=808662262561066&version=v2.0";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=808662262561066&version=v2.3";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
