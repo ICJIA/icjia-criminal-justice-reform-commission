@@ -1,0 +1,63 @@
+<!--<h3>Contact Info</h3>
+
+ <form ic-post-to="/contact">
+   <div class="form-group">
+     <label class="control-label">Email Address <i id="email-ind" class="fa fa-spinner fa-spin" style="display:none"></i> </label>
+     <input class="form-control" name="email" ic-post-to="/contact/email" ic-transition="none" ic-target="closest div" ic-replace-target="true" ic-indicator="#email-ind">
+   </div>
+   <div class="form-group">
+     <label>First Name</label>
+     <input type="text" class="form-control" name="firstName">
+   </div>
+   <div class="form-group">
+     <label>Last Name</label>
+     <input type="text" class="form-control" name="lastName">
+   </div>
+   <button class="btn btn-default">Submit</button>
+ </form>
+-->
+
+<div class="container">
+
+
+
+
+<form class="cmxform" id="commentForm" method="get" action="">
+  <fieldset>
+    <legend>Please provide your name, email address (won't be published) and a comment</legend>
+    <p>
+      <label for="cname">Name (required, at least 2 characters)</label>
+      <input id="cname" name="name" minlength="2" type="text" required>
+    </p>
+    <p>
+      <label for="cemail">E-Mail (required)</label>
+      <input id="cemail" type="email" name="email" required>
+    </p>
+    <p>
+      <label for="curl">URL (optional)</label>
+      <input id="curl" type="url" name="url">
+    </p>
+    <p>
+      <label for="ccomment">Your comment (required)</label>
+      <textarea id="ccomment" name="comment" required></textarea>
+    </p>
+    <p>
+      <input class="submit" type="submit" value="Submit">
+    </p>
+  </fieldset>
+</form>
+<script>
+$("#commentForm").validate(
+  {
+    submitHandler: function(form) {
+      alert('Submit')
+      //form.submit();
+    }
+  }
+);
+</script>
+
+
+
+
+</div>

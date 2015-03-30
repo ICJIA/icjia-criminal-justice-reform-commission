@@ -1,0 +1,39 @@
+<style>
+.modal-title {font-family: 'Oswald', sans-serif;}
+.modal-site-title {padding: 5px 0px 10px 0; font-size: 14px}
+</style>
+
+
+<!-- Modals -->
+<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Email this Article</h4>
+      </div>
+      <div class="modal-body">
+
+
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-3"><img src="{{#if socialMediaImage}}{{socialMediaImage}}{{else}}{{site.socialMediaImage}}{{/if}}" height="100" width="100"></div>
+              <div class="col-md-9">{{slug}}</div>
+            </div><!-- //row -->
+          </div><!-- //container -->
+
+
+
+
+
+
+        <!-- {{description}} -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Send email</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -52,6 +52,8 @@
 		<!-- endbuild -->
 
 
+
+
 		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -85,13 +87,22 @@
 		{{> body }}
 		{{> footer }}
 
+		{{> modals }}
+
+		<script>
+		
+</script>
+
 		<!-- build:js(src) {{assets}}scripts/vendor.js -->
+
 
 		<script src="{{assets}}_bower_components/bootstrap/dist/js/bootstrap.js"></script>
 		<script src="{{assets}}_bower_components/jquery-easing-original/jquery.easing.1.3.js"></script>
 		<script src="{{assets}}_bower_components/highcharts-release/highcharts.src.js"></script>
 		<script src="{{assets}}_bower_components/highcharts-release/modules/exporting.js"></script>
 		<script src="{{assets}}_bower_components/readmore/readmore.js"></script>
+		<script src="{{assets}}_bower_components/jquery-mockjax/jquery.mockjax.js"></script>
+		<script src="{{assets}}scripts/intercooler.js"></script>
 
 		<!-- endbuild -->
 
@@ -100,8 +111,9 @@
     <!-- build:js(src) {{assets}}scripts/main.js -->
     <script src="{{assets}}scripts/main.js"></script>
 		<script src="{{assets}}scripts/highcharts-data.js"></script>
-		<script src="{{assets}}scripts/google.js"></script>
-
+		{{#if site.development}}
+			<script src="{{assets}}scripts/sandbox.js"></script>
+		{{/if}}
     <!-- endbuild -->
 
 		<!-- Google Analytics -->

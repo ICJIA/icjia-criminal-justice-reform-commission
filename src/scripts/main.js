@@ -24,6 +24,9 @@
 
 $(document).ready(function() {
 	progressBarInit();
+	// $(function() {
+	// 	$('[data-toggle="tooltip"]').tooltip()
+	// })
 });
 
 
@@ -193,6 +196,14 @@ function fbs_click(u, t) {
 	//t = document.title;
 	window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) +
 		'&t=' + encodeURIComponent(t), 'sharer',
+		'toolbar=0,status=0,width=626,height=436');
+	return false;
+}
+
+function twitter_click(t) {
+
+	window.open('http://twitter.com/share?text=' + encodeURIComponent(t),
+		'sharer',
 		'toolbar=0,status=0,width=626,height=436');
 	return false;
 }

@@ -1,6 +1,6 @@
 ---
 layout: page.hbs
-description: "Detailed data and statistics about the latest Criminal Justice Research"
+description: "Ut condimentum dui et viverra tempus. Phasellus sit amet lobortis nulla, quis suscipit sapien. Curabitur ac iaculis neque."
 dateCreated: 03-17-2015 14:26:23
 slug: "What the research says"
 keywords:
@@ -23,16 +23,18 @@ posted: 03-17-2015
       <h4 class="related">Share This Article</h4>
       <div style="height: 20px"></div>
 
-      <a href="https://twitter.com/ICJIA_Illinois" class="social twitter"><i style="" class="fa fa-twitter-square fa-3x"></i></a>
+
       <br/>
 
-      <!--<a href="javascript:fbShare('http://www.icjia.org/cjreform2015/sandbox/article.html', 'Fb Share', 'This is the description', 520, 350)"><i style="color: #3B5998" class="fa fa-facebook-square fa-3x"></i></a>-->
+      <a href="#" class="social twitter" onclick="return twitter_click('{{slug}} via @ICJIA_Illinois')" target="_blank"><i style="" class="fa fa-twitter-square fa-3x"></i></a>
 
+      <!--<a href="javascript:fbShare('http://www.icjia.org/cjreform2015/sandbox/article.html', 'Fb Share', 'This is the description', 520, 350)"><i style="color: #3B5998" class="fa fa-facebook-square fa-3x"></i></a>-->
+      <br/>
       <a href="#" class="social facebook" onclick="return fbs_click('{{constructCanonical site.domain site.root this.page.dest}}','{{slug}}')" target="_blank"><i style="" class="fa fa-facebook-square fa-3x"></i></a>
 
       <br/>
 
-      <a href="mailto: cja.info@illinois.gov" class="social email">
+      <a href="#" class="social email" data-toggle="modal" data-target="#emailModal">
 
       <i class="fa fa-envelope-square fa-3x"></i>
     </a>

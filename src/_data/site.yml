@@ -23,6 +23,8 @@ socialMediaImage: 'http://www.icjia.state.il.us/cjreform2015/img/icjia-default.j
 root: '/cjreform2015/'
 domain: 'http://www.icjia.state.il.us'
 
+development: 'true'
+
 
 # root: '/'
 # domain: '127.0.0.1:9000'
