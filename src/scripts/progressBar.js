@@ -3,9 +3,7 @@ $(document).ready(function() {
 
   progressBarInit();
 
-  if ($("html").hasClass("oldie")) {
-    $('#progressBar').hide();
-  };
+
 
 });
 
