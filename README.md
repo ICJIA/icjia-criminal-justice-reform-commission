@@ -60,8 +60,8 @@ All edits must be made in /src/ directory. The /out/ directory is deleted before
 Make sure the deployment domain and root are correct in **/_data/site.yml/**:
 
 ```bash
-root: '/icjiadev/'
-domain: 'http://www.icjia.org'
+root: '/cjreform2015/'
+domain: 'http://www.icjia.state.il.us'
 ```
 
 The root and domain are used to generate the canonical metatag for each page.
