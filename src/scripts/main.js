@@ -22,158 +22,15 @@
 
 
 
-$(document).ready(function() {
-	progressBarInit();
-	// $(function() {
-	// 	$('[data-toggle="tooltip"]').tooltip()
-	// })
-});
-
-
-
-$(document).ready(function() {
-
-	$('#flat').addClass("active");
-	$('#progressBar').addClass('flat');
-
-	$('#flat').on('click', function() {
-		$('#progressBar').removeClass().addClass('flat');
-		$('a').removeClass();
-		$(this).addClass('active');
-		$(this).preventDefault();
-	});
-
-	$('#single').on('click', function() {
-		$('#progressBar').removeClass().addClass('single');
-		$('a').removeClass();
-		$(this).addClass('active');
-		$(this).preventDefault();
-	});
-
-	$('#multiple').on('click', function() {
-		$('#progressBar').removeClass().addClass('multiple');
-		$('a').removeClass();
-		$(this).addClass('active');
-		$(this).preventDefault();
-	});
-
-	$('#semantic').on('click', function() {
-		$('#progressBar').removeClass().addClass('semantic');
-		$('a').removeClass();
-		$(this).addClass('active');
-		$(this).preventDefault();
-		alert('hello');
-	});
-
-	$(document).on('scroll', function() {
-
-		maxAttr = $('#progressBar').attr('max');
-		valueAttr = $('#progressBar').attr('value');
-		percentage = (valueAttr / maxAttr) * 100;
-
-		if (percentage < 49) {
-			document.styleSheets[0].addRule('.semantic', 'color: red');
-			document.styleSheets[0].addRule(
-				'.semantic::-webkit-progress-value',
-				'background-color: red');
-			document.styleSheets[0].addRule('.semantic::-moz-progress-bar',
-				'background-color: red');
-		} else if (percentage < 98) {
-			document.styleSheets[0].addRule('.semantic', 'color: orange');
-			document.styleSheets[0].addRule(
-				'.semantic::-webkit-progress-value',
-				'background-color: orange');
-			document.styleSheets[0].addRule('.semantic::-moz-progress-bar',
-				'background-color: orange');
-		} else {
-			document.styleSheets[0].addRule('.semantic', 'color: green');
-			document.styleSheets[0].addRule(
-				'.semantic::-webkit-progress-value',
-				'background-color: green');
-			document.styleSheets[0].addRule('.semantic::-moz-progress-bar',
-				'background-color: green');
-		}
-	});
-
-});
-
-
 $('.expander').readmore({
-	speed: 175,
-	collapsedHeight: 60,
-	moreLink: '<a href="#"><span class="expand-style">More&nbsp;<i class="fa fa-angle-double-right"></i></span></a>',
-	lessLink: '<a href="#"><span class="expand-style"><i class="fa fa-angle-double-left"></i>&nbsp;</span></a>',
-	afterToggle: function() {
-		progressBarInit();
-	}
+  speed: 175,
+  collapsedHeight: 60,
+  moreLink: '<a href="#"><span class="expand-style">More&nbsp;<i class="fa fa-angle-double-right"></i></span></a>',
+  lessLink: '<a href="#"><span class="expand-style"><i class="fa fa-angle-double-left"></i>&nbsp;</span></a>',
+  afterToggle: function() {
+    progressBarInit();
+  }
 });
-
-
-/*
-Function to initialize the progress bar.
-This is called if elements on the page are expanded (e.g., the bios on the 'Commission' page)
-*/
-
-
-function progressBarInit() {
-	var getMax = function() {
-		return $(document).height() - $(window).height();
-	}
-
-	var getValue = function() {
-		return $(window).scrollTop();
-	}
-
-	if ('max' in document.createElement('progress')) {
-		// Browser supports progress element
-		var progressBar = $('progress');
-
-		// Set the Max attr for the first time
-		progressBar.attr({
-			max: getMax()
-		});
-
-		$(document).on('scroll', function() {
-			// On scroll only Value attr needs to be calculated
-			progressBar.attr({
-				value: getValue()
-			});
-		});
-
-		$(window).resize(function() {
-			// On resize, both Max/Value attr needs to be calculated
-			progressBar.attr({
-				max: getMax(),
-				value: getValue()
-			});
-		});
-	} else {
-		var progressBar = $('.progress-bar'),
-			max = getMax(),
-			value, width;
-
-		var getWidth = function() {
-			// Calculate width in percentage
-			value = getValue();
-			width = (value / max) * 100;
-			width = width + '%';
-			return width;
-		}
-
-		var setWidth = function() {
-			progressBar.css({
-				width: getWidth()
-			});
-		}
-
-		$(document).on('scroll', setWidth);
-		$(window).on('resize', function() {
-			// Need to reset the Max attr
-			max = getMax();
-			setWidth();
-		});
-	}
-}
 
 
 
@@ -192,18 +49,50 @@ function fbShare(url, title, descr, winWidth, winHeight) {
 /* Custom function for Facebook sharewindow version 2.0 */
 
 function fbs_click(u, t) {
-	//u = location.href;
-	//t = document.title;
-	window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) +
-		'&t=' + encodeURIComponent(t), 'sharer',
-		'toolbar=0,status=0,width=626,height=436');
-	return false;
+  //u = location.href;
+  //t = document.title;
+  window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) +
+    '&t=' + encodeURIComponent(t), 'sharer',
+    'toolbar=0,status=0,width=626,height=436');
+  return false;
 }
 
 function twitter_click(t) {
 
-	window.open('http://twitter.com/share?text=' + encodeURIComponent(t),
-		'sharer',
-		'toolbar=0,status=0,width=626,height=436');
-	return false;
+  window.open('http://twitter.com/share?text=' + encodeURIComponent(t),
+    'sharer',
+    'toolbar=0,status=0,width=626,height=436');
+  return false;
+}
+
+
+
+/**
+ * detect IE
+ * returns version of IE or false, if browser is not Internet Explorer
+ */
+function detectIE() {
+  var ua = window.navigator.userAgent;
+
+  var msie = ua.indexOf('MSIE ');
+  if (msie > 0) {
+    // IE 10 or older => return version number
+    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+  }
+
+  var trident = ua.indexOf('Trident/');
+  if (trident > 0) {
+    // IE 11 => return version number
+    var rv = ua.indexOf('rv:');
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+  }
+
+  var edge = ua.indexOf('Edge/');
+  if (edge > 0) {
+    // IE 12 => return version number
+    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+  }
+
+  // other browser
+  return false;
 }
