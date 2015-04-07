@@ -1,4 +1,4 @@
 <?php
-  header("Location: http://www.icjia.org/cjreform2015");
+  header("Location: http://www.icjia.state.il.us/cjreform2015");
   die();
 ?>

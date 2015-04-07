@@ -124,7 +124,9 @@
 
     <!-- build:js(src) {{assets}}scripts/main.js -->
     <script src="{{assets}}scripts/main.js"></script>
-		<script src="{{assets}}scripts/highcharts-data.js"></script>
+		{{#if chartDataJS}}
+			<script src="{{assets}}scripts/{{this.page.chartDataJS}}"></script>
+		{{/if}}
 		<script src="{{assets}}scripts/progressBar.js"></script>
 		{{#if site.development}}
 			<script src="{{assets}}scripts/sandbox.js"></script>
@@ -150,7 +152,13 @@
 
 -->
 
+{{#if chartDataJS}}
+<!-- icjia:
 
+Load chart data file: {{this.page.chartDataJS}}
+
+-->
+{{/if}}
 
 </body>
 </html>
