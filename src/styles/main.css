@@ -611,7 +611,7 @@ progress::-webkit-progress-bar {
 }
 
 /* Readmore styles */
-article.expander {color: #555; margin-top: 10px; margin-left: 20px; font-size: 14px; }
+article.expander {color: #666; margin-top: 10px; margin-left: 20px; }
 a[data-readmore-toggle]{
   margin-left: 20px;
 }
