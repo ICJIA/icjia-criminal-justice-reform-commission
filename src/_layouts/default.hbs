@@ -67,6 +67,24 @@
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+		<script>
+		// example.com?param1=name&param2=&id=6
+	  // $.urlParam('param1'); // name
+	  // $.urlParam('id');        // 6
+	  // $.urlParam('param2');   // null
+	  //http://stackoverflow.com/questions/19491336/get-url-parameter-jquery
+
+	  $.urlParam = function(name) {
+	    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location
+	      .href);
+	    if (results == null) {
+	      return null;
+	    } else {
+	      return results[1] || 0;
+	    }
+	  }
+		</script>
+
 
 		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
