@@ -408,14 +408,18 @@ hr.style-one {
       margin: 0 60px; }
 
 
+#filters {margin-top: 50px}
 
-.news-item {padding-left: 15px; padding-right: 15px; margin-top: 40px}
+.news-item {padding-left: 15px; padding-right: 15px; margin-top: 80px}
 .news-item h2 {padding: 0; margin-top: 0}
 .news-item.first {margin-top: 0px}
 .news-item.first h2 {padding: 0; margin-top: 0}
 .news-item .news-date {color: #999; font-family: 'pt mono', serif; font-size: 14px}
 .news-item .news-category {color: #f44013; font-family: 'pt mono', serif; font-size: 16px}
 .news-item p {margin-top: 10px; margin-left: 20px}
+button:focus, button {outline:0;}
+button[data-filter] {background: #eee}
+button[data-filter].active {background: #F54013}
 
 .article {margin-top: 50px}
 .article-headline {margin-top: 10px; font-size: 48px; font-weight: 700; font-family: 'Oswald', sans-serif;}
