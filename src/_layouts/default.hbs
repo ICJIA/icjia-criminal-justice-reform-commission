@@ -124,14 +124,19 @@
 
     <!-- build:js(src) {{assets}}scripts/main.js -->
     <script src="{{assets}}scripts/main.js"></script>
-		{{#if chartDataJS}}
-			<script src="{{assets}}scripts/{{this.page.chartDataJS}}"></script>
-		{{/if}}
+
 		<script src="{{assets}}scripts/progressBar.js"></script>
 		{{#if site.development}}
 			<script src="{{assets}}scripts/sandbox.js"></script>
 		{{/if}}
     <!-- endbuild -->
+
+
+		{{#if chartDataJS}}
+			<script src="{{assets}}scripts/{{this.page.chartDataJS}}"></script>
+		{{/if}}
+
+
 
 		<!-- Google Analytics -->
 		<script>

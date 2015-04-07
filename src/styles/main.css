@@ -410,7 +410,7 @@ hr.style-one {
 
 
 .news-item {padding-left: 15px; padding-right: 15px; margin-top: 40px}
-.news-item h2 {margin-bottom: 15px}
+.news-item h2 {padding: 0; margin-top: 0}
 .news-item.first {margin-top: 0px}
 .news-item.first h2 {padding: 0; margin-top: 0}
 .news-item .news-date {color: #999; font-family: 'pt mono', serif; font-size: 14px}
