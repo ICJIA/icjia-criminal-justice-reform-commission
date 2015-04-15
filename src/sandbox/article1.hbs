@@ -12,11 +12,32 @@ posted: 03-17-2015
 chartDataJS: "highcharts-sandbox.js"
 ---
 
+<div class="container-fluid mosaic-container">
+
+<div class="col-md-12 col-sm-12 col-xs-12 mosaic-well">
+  <div style="height: 450px;" >
+    <div class="overlay" style="height: 450px; background-image: url('{{assets}}img/prison.jpg')">
+      <a href="about/index.html" class="mosaic-link">
+        <div class="mosaic-tall-headline dark">
+
+        </div>
+
+      </a>
+
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
 <div class="container-fluid">
 
   <div class="col-md-3" id="leftCol">
-    <div id="sidebar-no-photo" class="hidden-xs hidden-sm">
-      <h4 style="text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-botttom: 8px; font-weight: 700; font-family: 'Oswald', san-serif;">Contents</h4>
+    <div id="sidebar-photo" class="hidden-xs hidden-sm">
+      <h4 style="text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-botttom: 8px; font-weight: 700; font-family: 'Oswald', san-serif;">Article contents</h4>
   <ul class="nav nav-stacked" id="">
    <li><a href="#sec1">Section 1</a></li>
    <li><a href="#sec2">Section 2</a></li>
@@ -26,6 +47,20 @@ chartDataJS: "highcharts-sandbox.js"
    </li>
 
   </ul>
+
+
+
+  <div style="margin-left: 15px; margin-top: 25px">
+
+  <a href="#" class="social twitter" onclick="return twitter_click('{{slug}} via @ICJIA_Illinois')" target="_blank"><i style="" class="fa fa-twitter-square fa-lg"></i></a>
+
+  <a href="#" class="social facebook" onclick="return fbs_click('{{constructCanonical site.domain site.root this.page.dest}}','{{slug}}')" target="_blank"><i style="" class="fa fa-facebook-square fa-lg"></i></a>
+
+  <!--<a href="#" class="social pdf"><i style="" class="fa fa-file-pdf-o fa-lg"></i></a>-->
+
+</div>
+
+
   </div>
   </div><!--/left-->
 
@@ -45,7 +80,7 @@ chartDataJS: "highcharts-sandbox.js"
       <div  id="sec1" class="section-spacer"></div>
 
 
-    <h1 class="article-headline">What the Research Says</h1>
+    <h1 class="article-headline">Research and Data</h1>
 
 
 
