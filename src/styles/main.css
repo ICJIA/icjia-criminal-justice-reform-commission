@@ -720,3 +720,9 @@ a[data-readmore-toggle]{
   .sub-section p, .sub-section ul, .sub-section ol {margin-left: 15px}
   .sub-section h4 {margin-top: 50px; font-family: 'Oswald', san-serif; text-transform: uppercase; color: #f44013}
   .sub-section h4.first {margin-top: 0px}
+
+
+
+  /* ----------------------------- Highcharts ----------------------------------*/
+
+  .HC_Container  {padding-top: 40px; padding-bottom: 40px;  margin: 0 auto; z-index: -1}

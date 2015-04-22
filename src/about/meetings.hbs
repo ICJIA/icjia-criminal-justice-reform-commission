@@ -35,9 +35,10 @@ navSort: 100
 
     <div id="filters" class="btn-group" role="group" aria-label="Select filter">
     <button type="button" data-filter="*" class="btn btn-default active">Show all</button>
-    <button type="button" data-filter=".materials" class="btn btn-default">Materials</button>
-  <button type="button" data-filter=".commission-meetings" class="btn btn-default">Commission Meetings</button>
 
+  <button type="button" data-filter=".commission-meetings" class="btn btn-default">Commission Meetings</button>
+  <button type="button" data-filter=".subcommittee" class="btn btn-default">Subcommittee Meetings</button>
+  <button type="button" data-filter=".materials" class="btn btn-default">Materials</button>
   <button type="button" data-filter=".training" class="btn btn-default">Training</button>
 </div>
 
@@ -52,6 +53,27 @@ navSort: 100
 
 
       <div id="news-container">
+
+        <div class="news-item commission-meetings">
+          <span class="news-category">COMMISSION MEETINGS</span>&nbsp<span class="news-date">04.21.2015</span>
+          <h2 >Commission to meet on Saturday, April 25 2015</h2>
+          <p>The next meeting of the Illinois State Commission on Criminal Justice and Sentencing Reform  will meet Saturday, April 25 at 1:00 p.m. in Kasbeer Hall at Corboy Law Center, 15th Floor, Loyola University Chicago, Water Tower Campus, 25 East Pearson Ave., Chicago, IL  60611
+  .</p>
+
+          <p><i class="fa fa-angle-double-right"></i>&nbsp;Agenda coming soon</p>
+            <p><i class="fa fa-angle-double-right"></i>&nbsp;<a href="{{assets}}pdf/Loyola Water Tower Campus Buildings map.pdf" onclick="ga('send', 'event', 'Downloads', 'Click', 'Loyola Water Tower Campus Buildings map.pdf')">Download a map of the Loyola Water Tower campus&nbsp;<i class="fa fa-file-pdf-o"></i></a></p>
+        </div>
+
+
+        <div class="news-item subcommittee">
+          <span class="news-category">SUBCOMMITTEE MEETINGS</span>&nbsp<span class="news-date">04.21.2015</span>
+          <h2 >Subcommittee on Budget and System Capacity to meet on Saturday, April 25 2015</h2>
+          <p>The Budget and System Capacity subcomittee for the Illinois State Commission on Criminal Justice and Sentencing Reform will meet Saturday, April 25 at 12:00 p.m. in Kasbeer Hall at Corboy Law Center, 15th Floor, Loyola University Chicago, Water Tower Campus, 25 East Pearson Ave., Chicago, IL  60611
+  .</p>
+
+  <p><i class="fa fa-angle-double-right"></i>&nbsp;<a href="{{assets}}word/budget-system04-25-2015.docx" onclick="ga('send', 'event', 'Downloads', 'Click', 'budget-system04-25-2015.docx')">Download the agenda&nbsp;<i class="fa fa-file-pdf-o"></i></a></p>
+    <p><i class="fa fa-angle-double-right"></i>&nbsp;<a href="{{assets}}pdf/Loyola Water Tower Campus Buildings map.pdf" onclick="ga('send', 'event', 'Downloads', 'Click', 'Loyola Water Tower Campus Buildings map.pdf')">Download a map of the Loyola Water Tower campus&nbsp;<i class="fa fa-file-pdf-o"></i></a></p>
+        </div>
 
 
 

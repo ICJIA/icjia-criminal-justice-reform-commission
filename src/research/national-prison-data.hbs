@@ -1,0 +1,149 @@
+---
+layout: page.hbs
+title: <%= site.title %>
+siteBase: <%= site.base %>
+siteFolder: <%= site.siteFolder %>
+description: "The United States has the largest prison population in the world, with approximately incarcerated adults and a rate of 698 per 100,000 each year. This rate is five to 10 times that of other Western democracies. While the United States represents 4 percent of the world’s population, it houses almost one quarter of the world’s prisoners"
+dateCreated: 04-20-2015 11:07:23
+slug: "National prison overview"
+keywords:
+- research
+posted: 03-17-2015
+chartDataJS: "highcharts-national-prison-data.js"
+---
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: 'Oswald', san-serif;}
+h3 {text-transform: uppercase; margin-top: 35px; margin-bottom: 10px}
+h4 {color: #666; margin-top: 15px; margin-bottom: 10px}
+p {margin-left: 10px}
+</style>
+
+
+<div class="container-fluid mosaic-container">
+
+<div class="col-md-12 col-sm-12 col-xs-12 mosaic-well">
+  <div style="height: 350px;" >
+    <div class="overlay" style="height: 450px; background-image: url('{{assets}}img/prison.jpg')">
+
+        <div class="mosaic-tall-headline dark">
+
+        </div>
+
+    
+
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+<div class="container-fluid">
+
+  <div class="col-md-3" id="leftCol">
+    <div id="sidebar-photo" class="hidden-xs hidden-sm">
+      <h4 style="text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-botttom: 8px; font-weight: 700; font-family: 'Oswald', san-serif;">Article contents</h4>
+ <ul class="nav nav-stacked" id="">
+   <li><a href="#growth">Population growth</a></li>
+   <li><a href="#causes">Causes</a></li>
+   <li><a href="#consequences">Consequences</a></li>
+
+
+ </ul>
+
+ <div style="margin-left: 15px; margin-top: 25px">
+
+ <a href="#" class="social twitter" onclick="return twitter_click('{{slug}} via @ICJIA_Illinois')" target="_blank"><i style="" class="fa fa-twitter-square fa-lg"></i></a>
+
+ <a href="#" class="social facebook" onclick="return fbs_click('{{constructCanonical site.domain site.root this.page.dest}}','{{slug}}')" target="_blank"><i style="" class="fa fa-facebook-square fa-lg"></i></a>
+
+ <!--<a href="#" class="social pdf"><i style="" class="fa fa-file-pdf-o fa-lg"></i></a>-->
+
+</div>
+
+
+
+
+</div>
+</div><!--/left-->
+  <div class="col-md-7">
+    <progress value="0" id="progressBar" class="flat">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+    </progress>
+    <div class="article">
+      <div  id="growth" class="section-spacer"></div>
+      <span class="article-date">{{site.title}}</span>
+    <h1 class="article-headline">National prison overview</h1>
+
+
+
+
+
+
+
+    <div class="article-content">
+
+
+
+
+  <h3 id="population-growth">Population growth</h3>
+  <p class="drop">The United States has the largest prison population in the world, with approximately <a href="http://www.prisonstudies.org/country/united-states-america">2.2 million</a> incarcerated adults and a rate of <a href="http://www.prisonstudies.org/country/united-states-america">698 per 100,000</a> each year. This rate is five to 10 times that of other Western democracies. While the United States represents 4 percent of the world’s population, it houses almost <a href="http://www.prisonstudies.org/sites/prisonstudies.org/files/resources/downloads/wppl_10.pdf">one quarter</a> of the world’s prisoners.</p>
+  <p>The <a href="http://www.nap.edu/catalog/18613/the-growth-of-incarceration-in-the-united-states-exploring-causes">growth of the prison population</a> rose from <a href="http://www.nap.edu/catalog/18613/the-growth-of-incarceration-in-the-united-states-exploring-causes">200,000 to 1.5 million</a> between 1973 and 2009. This graphed comparison shows state and federal prison population growth from 1978 to 2013. </p>
+
+  <div class="HC_Container">
+    <div id="HC_NationalFig1"></div>
+  </div>
+
+
+  <p>Research indicates minorities are disproportionately represented within U.S. prisons. In 2013, blacks comprised the largest portion of inmates at 37 percent, while whites and Hispanics comprised 32 and 22 percent of the prison population, respectively. That <a href="http://quickfacts.census.gov/qfd/states/00000.html">same year</a>, blacks comprised 13 percent of the population, while whites and Hispanics comprised 78 and 17 percent, respectively.</p>
+  <p>A <a href="https://www.amacad.org/content/Research/researchproject.aspx?d=63">research study</a> found that one-third of the black male high school dropouts under the age of 40 are incarcerated. In addition, black children are almost <a href="http://www.bjs.gov/index.cfm?ty=pbdetail&amp;iid=981">nine times more likely</a> to suffer the effects of an imprisoned parent than white children; Hispanic children are three times more likely.</p>
+  <p>The number of women incarcerated increased by nearly twice the rate of men between 1980 and 2010, with more than <a href="http://www.bjs.gov/content/pub/pdf/p10.pdf">200,000 women</a> imprisoned. The imprisonment rate of black women (113 per 100,000) was <a href="http://www.bjs.gov/content/pub/pdf/p13.pdf">twice the rate</a> of white women (51 per 100,000).</p>
+  <div  id="causes" class="section-spacer"></div>
+  <h3 id="causes-of-population-growth">Causes of population growth</h3>
+  <p>U.S. growth in imprisonment can be attributed to changes in law and policy that increased prison sentence probability and extended the lengths of prison sentences.</p>
+  <p>Indeterminate sentencing allows parole or prisoner review boards to determine when prison inmates will be released. But in the 1970s, many states ended indeterminate <a href="http://www.nap.edu/openbook.php?record_id=18613">sentencing</a>—including Illinois in 1978—for determinate sentencing, which increased the length of prison sentences.</p>
+  <p>Truth-in-sentencing measures requiring violent offenders to serve at least 85 percent of their sentence have contributed to the increased growth with longer periods of imprisonment. “Three-strikes” legislation created to imprison repeat felony offenders also has had an effect. Increased sentences for a third felony were thought to deter criminals from committing additional crimes. (This law does not apply to the state of Illinois).</p>
+  <p>Mandatory minimum sentences were established to deter criminal behavior while incapacitating offenders with longer prison sentences. These sentences have not proven to decrease crime rates, but they have had an <a href="http://www.nap.edu/openbook.php?record_id=18613&amp;page=R8">impact</a> on increasing prison populations.  Mandatory minimums also reduce the ability of prosecutors to plea bargain.</p>
+  <p>In the 1970s and 1980s, there was a growing public support for <a href="https://www.american.edu/spa/publicpurpose/upload/2013_Collateral-Damage.pdf">tougher sanctions</a> against drug-related crime. Starting with Nixon in 1970s and expanded during subsequent administrations through the 1990s, the federal government declared a <a href="http://www.drugpolicy.org/new-solutions-drug-policy/brief-history-drug-war">“war on drugs”</a> increasing federal funding for anti-drug enforcement combined with reducing funding for drug prevention and drug treatment. During that time, drug-related incarcerations increased dramatically. Between 1980 and 2006, the number <a href="http://www.justicepolicy.org/uploads/justicepolicy/documents/finding_direction-full_report.pdf">incarcerated for drug crimes</a> in increased 1,412 percent. Between 1987 and 1998, <a href="https://www.ncjrs.gov/pdffiles1/nij/181413.pdf">prison terms</a> for drug crime increased by about one year due to sentencing policies. The war on drugs did not solve the U.S. drug problem and is referred to as the <a href="http://www.drugpolicy.org/wasted-tax-dollars">trillion dollar failure</a>. According to the World Health Organization, Americans have higher levels of illicit drug use than citizens any other country and the DEA estimates capturing less than 10 percent of all illicit drugs.</p>
+  <div  id="consequences" class="section-spacer"></div>
+  <h3>Consequences</h3>
+  <h4 id="on-taxpayers">On taxpayers</h4>
+  <p>The Vera Institute of Justice released a study in 2012 that found the aggregate cost of prisons in 2010 in the 40 states that participated was $39 billion, with an average <a href="http://www.urban.org/research/publication/growth-increasing-cost-federal-prison-system-drivers-and-potential-solutions/view/full_report">annual cost</a> per inmate of $31,000 ($38,000 in Illinois). Staff salaries account for 63 percent of these <a href="http://scholarship.law.upenn.edu/cgi/viewcontent.cgi?article=1552&amp;context=faculty_scholarship">prison costs</a>, following by inmate living expenses (26 percent) and housing, utilities, and food services (13 percent). Many states, including Illinois, spend <a href="http://www.vera.org/sites/default/files/resources/downloads/price-of-prisons-updated-version-021914.pdf">funds</a> outside of the corrections budget to pay for staff pensions.</p>
+  <h4 id="on-crime">On crime</h4>
+  <p>A reliance on incarceration for non-violent and drug offenders has had little impact on crime reduction. Increased incarceration in the 1990s and 2000s had little to no <a href="https://www.brennancenter.org/sites/default/files/analysis/What_Caused_The_Crime_Decline.pdf">effect</a> on reducing violent and property crimes. More than <a href="http://www.bjs.gov/content/pub/pdf/p13.pdf">half</a> of imprisoned offenders in 2013 were serving time for drug offenses. Incarcerated offenders, especially <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1745-9133.2007.00456.x/abstract">low-level offenders</a>, have an increased likelihood of recidivism post-release.</p>
+  <p><a href="https://www.law.upenn.edu/live/files/1529-nagin-full-reportpdf">Research</a> shows longer prison sentences have little to no effect on crime deterrence. Unhealthy and dangerous prison conditions have been a challenge to <a href="https://www.brennancenter.org/sites/default/files/analysis/What_Caused_The_Crime_Decline.pdf">successful reentry</a>, leaving many ex-prisoners with physical and psychological problems that inhibit re-integration into the community, and creates an increased likelihood of recidivism.</p>
+  <h4 id="on-families-and-children">On families and children</h4>
+  <p>By 2000, 2.1 million children, about 3 percent of all U.S. children, had a parent incarcerated.  While it is intuitive that parental incarceration has a negative impact on child well-being, due to the many other factors in the child&#39;s life, this is <a href="http://www.ncsl.org/documents/cyf/childrenofincarceratedparents.pdf">difficult to prove</a>, and has not been in evidence in the research literature.  What we do know is that of <a href="http://www.bjs.gov/content/pub/pdf/pptmc.pdf">parents</a> who lived with their children one month prior to arrest, when the father was arrested, 88 percent of their children were cared for by the other parent. However, when the mother was arrested, 42 percent were being raised by a grandmother and another 35 percent by another relative. Two percent of children whose fathers were arrested went to foster care, but the rate was 11 percent for mothers.  More rigorous research is needed to fully understand the psychological, behavioral, and economic impact of incarceration on children.</p>
+  <h4 id="on-public-health">On public health</h4>
+  <p>Compared to the general population, those incarcerated have higher rates of <a href="http://www.bjs.gov/content/pub/pdf/mpsfpji1112.pdf">infectious diseases and chronic conditions</a> which are mostly contributed to unsanitary conditions within prison facilities. More than 20 percent of prisoners have suffered an infectious disease, including tuberculosis, hepatitis B and C, and STDs. According to a 2015 report, about <a href="http://www.bjs.gov/content/pub/pdf/mpsfpji1112.pdf">44 percent</a> of prisoners reported having a chronic condition while incarcerated. When compared to the general public, prisoners have a higher rate of <a href="http://www.bjs.gov/content/pub/pdf/mpsfpji1112.pdf">HIV</a> (1.3 percent versus 0.4 percent) and tuberculosis (6.5 percent versus 0.5 percent).</p>
+  <p>Services for infectious disease and chronic conditions are mandated in prisons, but upon release, facilities are not mandated to coordinate healthcare services between corrections and the community. State and federal facilities release inmates without <a href="http://ajph.aphapublications.org/doi/pdf/10.2105/AJPH.2013.301741">health</a> insurance, referrals, or treatment plans, leaving them to return home with negative health conditions. People cycle between jails, prisons, and communities, bringing negative health consequences to impoverished areas and contributing to existing population health disparities.</p>
+  <h4 id="on-employment-and-earnings">On employment and earnings</h4>
+  <p>Opportunities for employment while incarcerated are offered to those that are in custody, but the average hourly earnings are roughly <a href="http://www.mitpressjournals.org/doi/pdf/10.1162/DAED_a_00019">$0.89</a>. Families of the incarcerated carry the majority of the financial burden including depositing money into commissary accounts, traveling cost for visitations, and cost of phone calls.</p>
+  <p>Those incarcerated average less than <a href="http://johnjay.jjay.cuny.edu/nrc/NAS_report_on_incarceration.pdf">12 years</a> of schooling with low levels of functional literacy and low scores on cognitive tests. In <a href="https://www.illinois.gov/idoc/reportsandstatistics/Documents/FY2013 Annual Report.pdf">state fiscal year 2013</a>, 78 percent of Illinois’ prison population had a high school degree, GED, or less, and 7 percent of inmates had an eighth grade education or less. Incarceration takes inmates away from the labor market which can <a href="http://johnjay.jjay.cuny.edu/nrc/NAS_report_on_incarceration.pdf">erode skills</a> obtained before incarceration. In addition, after release, the formerly incarcerated are subject to <a href="http://www.vera.org/sites/default/files/resources/downloads/on-life-support-public-health-mass-incarceration-report.pdf">legal restrictions</a> that prohibit them from obtaining certain occupations with a criminal record.&nbsp;<i class="fa fa-bank" style="font-size: 14px; color: #903; vertical-align: middle; "></i></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+</div>
+</div>
