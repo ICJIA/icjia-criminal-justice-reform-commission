@@ -18,10 +18,10 @@ facebokContentType: 'article'
 facebookAppId: '808662262561066'
 facebookAuthorURL: 'https://www.facebook.com/ICJIA'
 
-socialMediaImage: 'http://www.icjia.state.il.us/cjreform2015/img/icjia-default.jpg'
+socialMediaImage: 'http://www.icjia.org/cjreform2015/img/icjia-default.jpg'
 
 root: '/cjreform2015/'
-domain: 'http://www.icjia.state.il.us'
+domain: 'http://www.icjia.org'
 
 development: 'true'
 
