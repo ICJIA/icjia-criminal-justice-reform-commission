@@ -74,8 +74,8 @@ a.social.email:hover {color: #f44013}
 a.social.pdf {color: #aaa}
 a.social.pdf:hover {color: #f44013}
 
-a.social.adjust-font {color: #aaa}
-a.social.adjust-font:hover {color: #f44013}
+a.social.adjust-font {color: #aaa; text-decoration: none !important;}
+a.social.adjust-font:hover {color: #f44013; text-decoration: none !important;}
 
 
 

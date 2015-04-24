@@ -1,6 +1,3 @@
-var clickCount = 0;
-var direction = '+';
-
 /* Application specific js here */
 
 //jQuery to collapse the navbar on scroll
@@ -92,6 +89,8 @@ function detectIE() {
 
 $(document).ready(function() {
 
+	var clickCount = 0;
+	var direction = '+';
 
 	$(function() {
 		$('[data-toggle="tooltip"]').tooltip();
