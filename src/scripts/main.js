@@ -1,3 +1,6 @@
+var clickCount = 0;
+var direction = '+';
+
 /* Application specific js here */
 
 //jQuery to collapse the navbar on scroll
@@ -90,6 +93,128 @@ function detectIE() {
 $(document).ready(function() {
 
 
+	$(function() {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+
+
+
+	/* ------------------ Font adjuster --------------------- */
+
+	// $('#adjust-font').click(function() {
+	// 	var direction = '+';
+	// 	var curSize = parseInt($('.article-content').css('font-size'));
+	// 	var maxSize = 28;
+	// 	var minSize = 22;
+	//
+	// 	if (curSize > maxSize) {
+	//
+	// 		curSize = minSize;
+	// 		direction = '+';
+	// 	}
+	//
+	// 	if (curSize < minSize - 1) {
+	//
+	// 		curSize = maxSize;
+	// 		direction = '-';
+	//
+	// 	}
+	//
+	// 	if (direction === '+') {
+	// 		curSize = curSize + 1;
+	// 	}
+	//
+	// 	if (direction === '-') {
+	// 		curSize = curSize - 1;
+	// 	}
+	//
+	//
+	//
+	// 	console.log('Current font size: ' + curSize);
+	// 	console.log('Current direction: ' + direction);
+	//
+	// 	$('.article-content').css('font-size', curSize);
+	// 	// Re-calculate the progress bar for the page
+	// 	progressBarInit();
+	//
+	// });
+
+	$('#adjust-font').click(function() {
+
+		var size;
+		var sizeLabel;
+
+		clickCount = clickCount + 1;
+
+		$('.article-content > *').css('font-size', function(i, value) {
+
+
+			if (direction === '+') {
+				size = parseInt(value) + 1;
+			}
+
+			if (direction === '-') {
+				size = parseInt(value) - 1;
+			}
+
+
+
+			return size;
+		});
+
+		progressBarInit();
+
+		if (clickCount > 3) {
+
+			if (direction === '+') {
+				direction = '-';
+			} else if (direction === '-') {
+				direction = '+';
+			}
+
+			clickCount = 0;
+		}
+
+		if (clickCount == 0) {
+			if (direction === '+') {
+				sizeLabel = 'Default';
+				$('#sizeLabel').html(sizeLabel);
+			} else {
+				sizeLabel = '';
+				$('#sizeLabel').html('');
+			}
+		} else {
+			sizeLabel = '';
+			$('#sizeLabel').html('');
+		}
+
+		console.log('clickCount: ' + clickCount);
+		console.log('direction: ' + direction);
+		console.log('sizeLabel: ' + sizeLabel);
+
+
+	});
+
+	// $('#adjust-font').click(function() {
+	// 	clickCount = clickCount + 1;
+	// 	if (clickCount >= 4) {
+	// 		clickCount = 0;
+	// 		if (direction === '+') {
+	// 			direction = '-';
+	// 		} else {
+	// 			direction = '+';
+	// 		}
+	// 	}
+	// 	$('.article-content > *').css('font-size', function(i, value) {
+	// 		console.log('Click count: ' + clickCount)
+	// 		if (direction === '+') {
+	// 			return parseInt(value) * 1.1;
+	// 		} else {
+	// 			return parseInt(value) / 1.1;
+	// 		}
+	// 	});
+	// });
+
 
 	var $container = $('#news-container');
 	// init
@@ -156,10 +281,12 @@ $(document).ready(function() {
 
 	/* smooth scrolling sections */
 	$('a[href*=#]:not([href=#])').click(function() {
-		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//,
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(
+				/^\//,
 				'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +
+				']');
 			if (target.length) {
 				$('html,body').animate({
 					scrollTop: target.offset().top - 50

@@ -3,19 +3,37 @@ layout: page.hbs
 title: <%= site.title %>
 siteBase: <%= site.base %>
 siteFolder: <%= site.siteFolder %>
-description: ""
-dateCreated: 04-20-2015 11:07:23
+description: "To safely reduce the Illinois prison population by 25 percent in 10 years, research and data must focus on laws, policies, and practices that determine prison admissions and lengths of stay."
+dateCreated: 04-22-2015 11:07:23
 slug: "Illinois Prison Overview"
 keywords:
 - research
 posted: 03-17-2015
-chartDataJS: "highcharts-national-prison-data.js"
+chartDataJS: "highcharts-illinois-prison-data.js"
 ---
 <style>
 h1,h2,h3,h4,h5,h6 {font-family: 'Oswald', san-serif;}
-h3 {text-transform: uppercase; margin-top: 35px; margin-bottom: 10px}
-h4 {color: #666; margin-top: 15px; margin-bottom: 10px}
+h2 {text-transform: uppercase; margin-top: 35px; margin-bottom: 10px}
+h3 {color: #666; margin-top: 15px; margin-bottom: 10px}
 p {margin-left: 10px}
+table caption {font-size: 18px; text-transform: uppercase;}
+table {font-size: 18px;}
+.table-box {margin-top: 25px; margin-bottom: 25px}
+.TableNote {font-size: 16px; font-weight: 700}
+.TableSubgroup {
+		padding-left: 10px;
+	}
+
+	 .TableTitle {
+		font-weight: bold;
+	    display: table-caption;
+		text-align: center;
+		}
+	.TableSubHead {
+		font-weight: bold;
+	}
+  .spacer {padding-top: 35px;}
+	.timeline-date {background: #eee; text-align: center; width: 120px; font-weight: 400; font-family: 'Oswald', san-serif;}
 </style>
 
 
@@ -29,7 +47,7 @@ p {margin-left: 10px}
 
         </div>
 
-    
+
 
     </div>
   </div>
@@ -44,30 +62,50 @@ p {margin-left: 10px}
 <div class="container-fluid">
 
   <div class="col-md-3" id="leftCol">
-    <!-- <div id="sidebar-photo" class="hidden-xs hidden-sm">
+    <div id="sidebar-photo" class="hidden-xs hidden-sm">
       <h4 style="text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-botttom: 8px; font-weight: 700; font-family: 'Oswald', san-serif;">Article contents</h4>
  <ul class="nav nav-stacked" id="">
-   <li><a href="#growth">Population growth</a></li>
-   <li><a href="#causes">Causes</a></li>
-   <li><a href="#consequences">Consequences</a></li>
+   <li><a href="#introduction">Introduction</a></li>
+   <li><a href="#illinois-crime-trends">Crime and courts</a></li>
+   <li><a href="#illinois-prison-population-1">Prison</a></li>
+   <li><a href="#by-bed-years-and-length-of-stay">Time served</a></li>
+   <li><a href="#illinois-prison-costs">Prison costs</a></li>
 
 
  </ul>
 
- <div style="margin-left: 15px; margin-top: 25px">
+ <ul class="social-sidebar">
 
- <a href="#" class="social twitter" onclick="return twitter_click('{{slug}} via @ICJIA_Illinois')" target="_blank"><i style="" class="fa fa-twitter-square fa-lg"></i></a>
+			<li>
 
- <a href="#" class="social facebook" onclick="return fbs_click('{{constructCanonical site.domain site.root this.page.dest}}','{{slug}}')" target="_blank"><i style="" class="fa fa-facebook-square fa-lg"></i></a>
+		<a href="javascript:void(0);" class="social twitter" onclick="return twitter_click('{{escapeString slug}} via @ICJIA_Illinois')" target="_blank" data-toggle="tooltip" data-placement="right" title="Share on Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+	</li>
+
+	<li>
+		<a href="#" class="social facebook" onclick="return fbs_click('{{constructCanonical site.domain site.root this.page.dest}}','{{escapeString slug}}')" target="_blank" data-toggle="tooltip" data-placement="right" title="Share on Facebook"><i style="" class="fa fa-facebook-square fa-2x"></i></a>
+
+	</li>
+
+<!--	<li>
+		<a href="#" class="social print" data-toggle="tooltip" data-placement="right" title="Print page"><i style="" class="fa fa-print fa-2x"></i></a>
+
+	</li>-->
+
+	<li>
+		<a href="javascript:void(0);" id="adjust-font" class="social adjust-font" data-toggle="tooltip" data-placement="right" title="Adjust font size">
+			<span style="font-size: 30px; font-weight: 700">A</span><span style="font-size: 24px; font-weight: 700">A</span>
+
+		</a>
+		<div id="sizeLabel" style="color: #f44013; font-size: 10px; text-transform: uppercase;">Default</div>
+	</li>
+
+
+	</ul>
+
 
 
 
 </div>
-
-
-
-
-</div> -->
 </div><!--/left-->
   <div class="col-md-7">
     <progress value="0" id="progressBar" class="flat">
@@ -89,11 +127,449 @@ p {margin-left: 10px}
     <div class="article-content">
 
 
-        Data coming soon.
 
 
 
-<div style="height: 800px"></div>
+
+<h2 id="introduction" class="spacer">Introduction</h2>
+
+<p>To safely reduce the Illinois prison population by 25 percent in 10 years, research and data must focus on laws, policies, and practices that determine prison admissions and lengths of stay. </p>
+
+<p>There is widespread belief that more prisons will deter criminals and reduce offending. However, <a href="https://www.brennancenter.org/sites/default/files/analysis/What_Caused_The_Crime_Decline.pdf">research shows the rate of incarceration has only a minimal relationship to crime reduction</a>. In fact, <a href="http://www.prisonpolicy.org/scans/sp/DimRet.pdf">research indicates the use of prison has reached a point of diminishing returns and incarceration may do more harm to public safety than good</a>. </p>
+
+<p>The following is a brief description of trends related to the Illinois prison populations supported by local and national research to foster discussion of what is possible in reform. </p>
+
+<h2 id="historical-perspective">Historical perspective</h2>
+
+<p>Illinois Governor Bruce Rauner is the fourth of the last five governors to convene a group of legislators, stakeholders, and criminal justice experts to address the consequences of the state's use of prison. Testimony from Illinois Criminal Justice Information Authority (ICJIA) Executive director John Maki, highlights key historic points that led to Governor Rauner's Executive Order establishing the Illinois State Commission on Criminal Justice and Sentencing Reform. </p>
+
+<p>Historically, Illinois has had a costly overreliance on prison which has grown exponentially in the last four decades, from 6,000 inmates in 1974 to almost 49,000 today. The growth has continued despite space constraints - today's prison system was designed to hold only 32,000 - and falling crime rates since the early 1990s. <br>
+Figure 1 offers a timeline of significant events in the recent history of Illinois' prisons.</p>
+
+<div class="table-box">
+<table class="table">
+	<caption class="TableTitle">Figure 1 - Timeline of Illinois Prisons</caption>
+
+  <tr>
+    <td class="timeline-date">1977</td>
+    <td>Illinois abolishes indeterminate sentencing in favor of determinate sentencing; new felony classification scheme created Class X for the most serious offenders; Governor Thompson reestablished the death penalty.</td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="timeline-date">1977 - 1983</td>
+    <td>Prison admissions increase, longer lengths of stays increase prison population from 10,000 to 14,000.</td>
+  </tr>
+  <tr>
+    <td>Governor James R. Thompson's Task Force on Prison Overcrowding recommends comprehensive correction reform - diverting low-level offenders, building new prisons.</td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="timeline-date">1991</td>
+    <td>Prison population fills new prisons, adds 29,000 inmates.</td>
+  </tr>
+  <tr>
+    <td>Crime rates for property, violent offenses peak in early 1990s and fall over two decades.</td>
+  </tr>
+  <tr>
+    <td rowspan="5"  class="timeline-date">1993</td>
+    <td>Prison pop. reaches 32,000 -- twice its capacity.</td>
+  </tr>
+  <tr>
+    <td>Governor Jim Edgar's Task Force on prison overcrowding recommends continuum of community-based sanctions and moratorium on sentence enhancements. Task Force estimates the plan will reduce the prison population over 20 percent (7,500 inmates in four years).</td>
+  </tr>
+  <tr>
+    <td>Good-time sentence credits expands for prison programs.</td>
+  </tr>
+  <tr>
+    <td>Illinois creates new boot camp diversion programs.</td>
+  </tr>
+  <tr>
+    <td>Tamms Correctional Center built, is Illinois' only "supermax" facility (until 2013 closure).</td>
+  </tr>
+  <tr>
+    <td  class="timeline-date">1998</td>
+    <td>Truth in Sentencing almost doubles length of time most serious offenders served in prison by removing their ability to earn time off their sentences.</td>
+  </tr>
+  <tr>
+    <td  class="timeline-date">1991 - 1999</td>
+    <td>State prisons add an additional 15,000 inmates during Governor Edgar administration.</td>
+  </tr>
+  <tr>
+    <td  class="timeline-date">2000</td>
+    <td >Governor George Ryan issued a moratorium on executions.</td>
+  </tr>
+  <tr>
+    <td rowspan="2"  class="timeline-date">2003</td>
+    <td>Governor Rod Blagojevich focuses on reentry, reducing recidivism creates,<br>(1) a graduated sanctions system for mandatory supervised release (formerly parole), <br>(2) Sheridan drug treatment prison, and,<br>(3) commission to examine and improve reentry systems.</td>
+  </tr>
+  <tr>
+    <td>State creates Illinois Capital Punishment Reform Study Committee.</td>
+  </tr>
+  <tr>
+    <td  class="timeline-date">2003 - 2009</td>
+    <td>Prison population stabilizes at about 45,000 inmates.</td>
+  </tr>
+  <tr>
+    <td  class="timeline-date">2009</td>
+    <td>Governor Pat Quinn grants sentence credits to short-term prisoners to reduce the prison pop. After suspending the policy, prison population increases from about 45,000 to 48,000.</td>
+  </tr>
+  <tr>
+    <td  class="timeline-date">2011</td>
+    <td>Illinois abolishes the death penalty.</td>
+  </tr>
+  <tr>
+    <td  class="timeline-date">2013</td>
+    <td>Prison population approaches 49,000. Property and violent crime rates at record lows.</td>
+  </tr>
+  <tr>
+    <td  class="timeline-date">2015</td>
+    <td>Prison population remains just below 49,000.</td>
+  </tr>
+</table>
+</div>
+
+
+<h2 id="illinois-prison-population">Illinois Prison Population</h2>
+
+<h3 id="demographics">Demographics</h3>
+
+<p>The 2013 demographic and offense characteristics of the Illinois prison population and state population are compared in Figure 2. The Illinois prison population was primarily male. Women accounted for 6 percent of the prison population but half of the Illinois general population. Almost 60 percent of the prison population were Black compared to 15 percent of the general population. And while nearly 65 percent of the general population is White, Whites made up less than 30 percent of the prison population. Geographically, half of all inmates were sent to the Illinois Department of Corrections (IDOC) from Cook County. Twelve percent were from the Collar counties of DuPage, Kane, Lake, McHenry, and Will, and 21 percent were from other urban counties in the state. Only 17 percent of offenders in prison in December 2013 were from rural counties.</p>
+
+<div class="table-box">
+<table class="table">
+<caption class="TableTitle">Figure 2 - Characteristics of Illinois prison and general population, 2013</caption>
+
+<tr>
+  <th></th>
+  <th colspan="2">Prison Population*</th>
+  <th colspan="2">Illinois General Population</th>
+</tr>
+<tr>
+  <td></td>
+  <th>Number</th>
+  <th>Percent</th>
+  <th>Number</th>
+  <th>Percent</th>
+</tr>
+
+<tr>
+  <td class="TableSubHead">Total</td>
+  <td>48,652</td>
+  <td>100.0%</td>
+  <td>12,882,135</td>
+  <td>100.0%</td>
+</tr>
+<tr>
+  <td class="TableSubHead">Race/Ethnicity</td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+  <td class="TableSubgroup">White</td>
+  <td>14,137</td>
+  <td>29.1%</td>
+  <td>8,173,563</td>
+  <td>63.5%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Black</td>
+  <td>28,190</td>
+  <td>57.9%</td>
+  <td>1,887,329</td>
+  <td>14.7%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Hispanic</td>
+  <td>6,059</td>
+  <td>12.5%</td>
+  <td>2,121,248</td>
+  <td>16.5%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Other</td>
+  <td>266</td>
+  <td>0.5%</td>
+  <td>699,995</td>
+  <td>5.4%</td>
+</tr>
+<tr>
+  <td class="TableSubHead">Sex</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Male</td>
+  <td>45,737</td>
+  <td>94.0%</td>
+  <td>6,326,483</td>
+  <td>49.1%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Female</td>
+  <td>2,915</td>
+  <td>6.0%</td>
+  <td>6,555,652</td>
+  <td>50.1%</td>
+</tr>
+<tr>
+  <td class="TableSubHead">County</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Cook</td>
+  <td>5,645</td>
+  <td>11.6%</td>
+  <td>5,240,700</td>
+  <td>40.7%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Collar</td>
+  <td>24,121</td>
+  <td>49.6%</td>
+  <td>3,149,026</td>
+  <td>24.4%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Other Urban</td>
+  <td>8,488</td>
+  <td>17.4%</td>
+  <td>2,321,061</td>
+  <td>18.0%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Rural</td>
+  <td>10,398</td>
+  <td>21.4%</td>
+  <td>2,171,348</td>
+  <td>16.9%</td>
+</tr>
+
+</table>
+<span class="TableNote">*as of 12/31/2013</span>
+</div>
+
+
+
+<h3 id="by-offense">By offense</h3>
+
+<p>In 2013, 45 percent of Illinois prisoners were incarcerated for a violent offense, which varied by gender. Almost half of male offenders were in prison for a violent crime (45 percent) compared to 34 percent of female offenders. About 20 percent of male and females were in prison for property and drug crimes. Few male offenders were in prison for a property (19 percent) or drug crime (21 percent). However, a larger percentage of female offenders were in prison for a property crime (30 percent) or drug crime (29 percent). Small number of men and women were in prison for a sex crime, 13 percent and 3 percent respectively. </p>
+
+<p>In Illinois, felony and misdemeanor offenses are classified by degree of severity. In order of decreasing severity, these classifications are first degree murder, Class X felonies, Class 1, 2, 3, and 4 felonies. State statute mandates imprisonment first degree murder (Class M), all Class X offenses, and certain Class 1 and 2 felonies. Nearly 40 percent of the prison population were incarcerated for a Class M or X felony offenses. Few prisoners (12 percent) were incarcerated for Class 4 felony offenses. </p>
+<div class="table-box">
+<table class="table">
+<caption class="TableTitle">Figure 3 - Prison Population: Admission Types and Offense Characteristics</caption>
+<tr>
+  <th>Offense Class</th>
+  <th>Number</th>
+  <th>Percent</th>
+</tr>
+<tr>
+  <td class="TableSubgroup">Class 4</td>
+  <td>5,739</td>
+  <td>11.8%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Class 3</td>
+  <td>4,234</td>
+  <td>8.7%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Class 2</td>
+  <td>10,933</td>
+  <td>22.5%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Class 1</td>
+  <td>8,036</td>
+  <td>16.5%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Class X</td>
+  <td>12,099</td>
+  <td>24.9%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Class M</td>
+  <td>7,081</td>
+  <td>14.6%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Other/unknown</td>
+  <td>530</td>
+  <td>1.0%</td>
+</tr>
+<tr>
+  <td class="TableSubHead">Offense type</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Person</td>
+  <td>21,768</td>
+  <td>44.7%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Property</td>
+  <td>9,507</td>
+  <td>19.5%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Drug</td>
+  <td>10,317</td>
+  <td>21.2%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Sex</td>
+  <td>5,968</td>
+  <td>12.3%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Other/unknown</td>
+  <td>1,092</td>
+  <td>2.2%</td>
+</tr>
+<tr>
+  <td class="TableSubHead">Admission type</td>
+  <td></td>
+  <td></td>
+</tr>
+  <tr>
+  <td class="TableSubgroup">New court</td>
+  <td>43,158</td>
+  <td>89.5%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Technical violator</td>
+  <td>4,988</td>
+  <td>10.3%</td>
+</tr>
+<tr>
+  <td class="TableSubgroup">Other/unknown</td>
+  <td>146</td>
+  <td>0.1%</td>
+</tr>
+</table>
+<span class="TableNote">*as of 12/31/2013</span>
+</div>
+
+<h2 id="illinois-crime-trends" class="spacer">Illinois Crime Trends</h2>
+
+<p><a href="http://www.isp.state.il.us/crime/ucrhome.cfm">Crime rates in Illinois measured by I-UCR</a> property and violent offenses reported to the police have fallen significantly since the early 1990s. At its peak in 1991, rates showed more than 5,000 property crimes and more than 1,000 violent crimes per 100,000 residents. These rates fell to 2,500 property crimes and 415 violent crimes per 100,000 in 2012, a 50-percent drop. </p>
+
+<p>While the violent crime rate decreased 30 percent and the property rate decreased 40 percent over 40 years, by 2013, the incarceration rate had increased 600 percent. At the peak of the crime rates in 1991, 250 individuals per 100,000 residents were in Illinois prisons. In 2012, close to 400 individuals per 100,000 residents were in Illinois prisons. The drug arrest rate in Illinois increased from 181.3 arrests per 100,000 people in 1975 to nearly 900 arrests per 100,000 people in 1999, varying between 700 and 900 arrests per 100,000 people in the past 15 years. The trends of arrests and the prison population in Illinois are shown in Figure 4.</p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig4"></div>
+</div>
+
+
+<h2 id="illinois-court-trends">Illinois Court Trends</h2>
+
+<p>In Illinois, after an arrest for a felony offense, the prosecutor may choose to file a felony case against a defendant that could end in any one of several outcomes, including conviction and subsequent sentence. A felony filing occurs when a felony case is officially entered in a court against one or more defendants by the prosecutor. A felony sentence occurs when the defendant pleads guilty or is convicted of a felony and sentenced to probation, prison, or another punishment. Trends of arrests, felony filings, and felony sentences are shown in Figure 5.</p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig5"></div>
+</div>
+
+<p>Trends in arrests, felony filings, and felony sentences are shown as ratios in Figure 6. The ratio of felony sentences per total I-UCR violent, property, and controlled substance arrests more than doubled between 1982 and 2013 from roughly 0.25 to 0.5 felony sentences per one of these arrests.  From 1982 to 2013, the ratio of felony sentences per felony filing remained about the same at 0.6 to 0.7 sentences per filing.</p>
+
+<p>These data indicate that a person charged with a felony today does not have a considerably higher probability of being convicted and sentenced compared to years past. However, a person arrested for violent, property, or controlled substance offense may have a higher probability of being charged with a felony. This could be a result of legislative initiatives and increased charging severity. If the probability of an arrest resulting in a felony filing increases, the number of sentences to prison could increase even if the probability of being sentenced to prison for a conviction or for a felony filing does not change. <a href="http://www.nap.edu/catalog/18613/the-growth-of-incarceration-in-the-united-states-exploring-causes">National Research Council Committee on Law and Justice noted similar national trend showing an increase in the probability of an arrest leading to incarceration</a>. </p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig6"></div>
+</div>
+
+<h3 id="illinois-sentences-by-type">Illinois sentences by type</h3>
+
+<p>The distribution of Illinois court sentence dispositions, shown in Figure 7, differs for misdemeanors and felonies. The prison population does not include misdemeanants, but the distribution of misdemeanor sentences may be important if offenses that are currently felonies are reclassified. Probation and supervision make up one-third of all felony dispositions and almost two-thirds of all misdemeanor dispositions. Incarceration in either jail or prison composes almost half of all felony dispositions and 16 percent of all misdemeanor dispositions.</p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig7"></div>
+</div>
+
+<h2 id="illinois-prison-admission-trends">Illinois Prison admission trends</h2>
+
+<p>After a felony conviction, an offender may be sentenced to prison and admitted to IDOC. Overall, admissions to IDOC have substantially increased over the past 30 years, but are lower than their peak in the mid-2000s. Between fiscal years 1984 to 2013, the number of admissions to IDOC almost tripled, from 9,943 to 31,250 admissions. The growth in admissions varies by offense class and offense type.</p>
+
+<p>Admissions to IDOC by class also changed considerably during that time period (Figure 8). Admissions from new court sentences (including those convicted of new crimes and sentenced while on mandatory supervised release) nearly tripled over the past 30 years but are below their peak period, in the mid-2000s. The largest growth in admissions was for Class 4 felonies. Class 4 admissions were roughly 10 percent of all new court admissions in the early 1980s but 35 to 40 percent of all new court admissions in the past 10 years.</p>
+
+<p>Class 4 felony sentences range from one to three years, with the majority of Class 4 felony offenders being admitted on a property or drug offense. Although Class 4 is the least severe felony class in Illinois, Class 4 admissions typically have more extensive criminal histories and higher recidivism rates. When entering an IDOC facility on a new sentence, a Class 4 offender will have an average of 17 arrests. Nearly 75 percent will have at least one prior violent arrest on their record as well as a prior probation sentence and 60 percent having at least one prior admission for a crime against a person. Due to relatively short sentences and eligibility for jail and sentence credits, Class 4 offenders typically spend less than a year in prison; roughly half spend 6 months or less. This can be problematic for corrections-based programming that has better results for those in programming longer.</p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig8"></div>
+</div>
+
+<p>Technical violator admissions, admissions due to a violation of parole, fluctuate considerably over time, but overall they have increased substantially in Illinois and nationally. These admissions are not due to a new conviction while on parole but can be triggered by a new arrest while on MSR. <a href="http://www.icjia.state.il.us/spac/pdf/SPAC%20Report%20MSR%20violator%209-13.pdf">Various parole policies, staffing levels and decisions, MSR population levels, and legislation have influenced technical violator readmission levels over time</a>. </p>
+
+<p>Like offense class, the admissions to IDOC vary over time by offense type (Figure 9). The largest increase by offense type has been for drug admissions, although the number has largely declined since the mid - to late- 2000s. The numbers of admissions for violent, property, and sex offenses have doubled to tripled over the past 30 years, but the number of drug admissions, even after accounting for the recent decline, has increased by a factor of approximately 15. Reported property offenses peaked in the early 1990s and violent offenses reported to police peaked in the mid-1990s. Both have had a relatively steady decline into the present day, but new court admissions to prison for violent and property offenses have yet to return to pre-1990 levels and are both about twice as high as in 1989.</p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig9"></div>
+</div>
+
+
+<h2 id="illinois-prison-population-1" class="spacer">Illinois Prison Population</h2>
+
+<h3 id="by-class-and-offense-type">By class and offense type</h3>
+
+<p>Trends in Illinois prison population by offense class are shown in Figure 10.  The number of Class 3 felons remained stable over time while the number of murders, Class 1, and Class 2 felonies more than doubled.  The largest growth was seen in Class 4 felonies: IDOC held more than seven times more Class 4 felons in 2013 than in 1989. Figure 11 shows the growth of the IDOC population by offense type. Person and drug crimes fueled the largest growth, while modest increases were seen in property and sex crimes. </p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig10"></div>
+</div>
+<div class="HC_Container">
+<div id="HC_IllinoisFig11"></div>
+</div>
+
+
+
+
+
+<h3 id="by-bed-years-and-length-of-stay" class="spacer">By bed-years and length of stay</h3>
+
+<p>Bed-years is a metric that allows another perspective on resource consumption by IDOC. Bed-years are the number of years a person sentenced to IDOC will actually spend in prison. For example, a person sentenced on a class 4 felony sentenced may only spend half of one year in prison (0.5 bed-years), while a person sentenced for a class M felony may spend 20 years in prison (20 bed-years). Figure 12 shows the relationship between bed-years and the number of inmates held by the Illinois Department of Corrections. Bed-years are appropriate for fiscal and operational analysis, as the state pays for beds over time. A person who stays less than a year in prison does not occupy a full bed-year, while the state taxpayers must pay 20 bed-years for a person on a 20 year sentence.</p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig12"></div>
+</div>
+
+<p>While the number of inmates has risen 8 percent since 2000, the length of time served by inmates exiting IDOC has continued to increase the total bed-years used by the prison system by 28 percent over the same time period. That increase can be attributed to increased sentence terms due to mandatory minimums, extended terms based on aggravating factors, and the effect of truth-in-sentencing laws. Truth-in-sentencing, a trend that occurred in Illinois and other states, required those convicted and sentenced to prison to serve a large proportion (usually 85%) of their court-imposed sentence. The bed-year impact of truth-in-sentencing provisions passed after 1999 will continue to increase the upward trend in bed-years as lengths of stay of those leaving prison increases. <a href="http://www.icjia.state.il.us/public/pdf/ResearchReports/FINAL%20REPORT%20The%20Impact%20of%20Illinois%20Truth-in-Sentencing%20Law%200609.pdf">A detailed analysis of the impact of truth in sentencing laws in Illinois is available here</a>.</p>
+
+<p>Small changes to sentence credits can have a large impact on the prison population. Crediting a small amount of sentence credit across thousands of offenders creates a large bed-years and fiscal savings. Dr. David Olson described in his <a href="http://www.icjia.state.il.us/public/pdf/ResearchReports/SWICC_Year_3_Evaluations_Report_March_2011.pdf">evaluation of drug treatment programs</a> in Illinois the sizable impact of allowing credits for program participation. During the four-year period under study in his evaluation of Southwestern Illinois Correctional Center, Olson found that 34,355 days of good conduct credit were earned per year, or more than 137,343 days total. This sentence credit time is equivalent to 94 years of reduced incarceration per fiscal year. With a current per capita cost of <span>$</span>22,201, that creates a savings of <span>$</span>2.1 million annually.</p>
+
+<p>Actual time served among Class M and X felony exits steadily increased both before and after truth-in-sentencing laws passed in 1998 (Figure 13). From 1989 through 2013, the actual time served in prison (excluding technical violators and any additional time served due to technical violations) by class M offenders exiting nearly doubled from 8.6 to 17.1 years and for class X offenders exiting increased 50 percent from 3.6 to 5.4 years.</p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig13"></div>
+</div>
+
+
+<p>Actual time served by offenders in Class 4 through Class 1 felony offense categories that exited (excluding technical violators and any additional time served due to technical violations) show similar patterns since 1989 (Figure 14). A large increase in time served occurred in recent years due to the suspension of awarding meritorious and supplemental meritorious good conduct credits in 2009. This effectively added several months of incarceration for inmates who would previously have been allowed such credits and increased the size of the prison population. </p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig14"></div>
+</div>
+
+
+
+<h3 id="the-aging-prison-population">The aging prison population</h3>
+
+<p>Over the past several decades people admitted to Illinois prisons have been getting older.  This trend is true for both new admissions and offenders returning to prison for a technical violation of parole. The increasing age of inmates admitted to Illinois prisons over time is seen at every level of offense severity, but especially those convicted of murder. Figure 15 shows the average age by offense class over time. Inmates sentenced for Murder from 1993 to 2013 had the largest increased average age, over seven years, while others increase from four to six years.</p>
+
+<div class="HC_Container">
+<div id="HC_IllinoisFig15"></div>
+</div>
+
+<h2 id="illinois-prison-costs" class="spacer">Illinois Prison Costs</h2>
+<p>Since 1999, Illinois has appropriated over $1 billion for adult prisons and parole. For fiscal year 2014, the state appropriated and spent almost $1.3 billion on the prison budget. Off budget items, including pension contributions and group health benefits for state corrections employees, were an additional $600 million spent on the adult corrections system. The budget for IDOC, not adjusted for inflation, can be seen longitudinally in Figure 16.</p>
+<div class="HC_Container">
+<div id="HC_IllinoisFig16"></div>
+</div>
+
+<h3 id="note-on-data-sources">Note on data sources</h3>
+
+<p>Data on IDOC admissions, prison population, length of stay, and budget are from SPAC and ICJIA analyses of data provided by the IDOC Planning and Research Unit as well as IDOC statistical reports and correspondence with IDOC officials. I-UCR offense and arrest data are from Crime in Illinois reports and data published by the Illinois State Police. Data on felony filings is from annual reports published by the Administrative Office of the Illinois Courts. Felony sentences in Figure 5 and 6 are also from these reports. Felony sentence dispositions in Figure 7 are from SPAC and ICJIA analysis of electronic criminal history data from the Illinois State Police.</p>
   </div>
 
   </div>

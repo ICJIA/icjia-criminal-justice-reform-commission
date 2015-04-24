@@ -29,7 +29,7 @@ p {margin-left: 10px}
 
         </div>
 
-    
+
 
     </div>
   </div>
@@ -54,15 +54,29 @@ p {margin-left: 10px}
 
  </ul>
 
- <div style="margin-left: 15px; margin-top: 25px">
+ <ul class="social-sidebar">
 
- <a href="#" class="social twitter" onclick="return twitter_click('{{slug}} via @ICJIA_Illinois')" target="_blank"><i style="" class="fa fa-twitter-square fa-lg"></i></a>
+      <li>
 
- <a href="#" class="social facebook" onclick="return fbs_click('{{constructCanonical site.domain site.root this.page.dest}}','{{slug}}')" target="_blank"><i style="" class="fa fa-facebook-square fa-lg"></i></a>
+    <a href="javascript:void(0);" class="social twitter" onclick="return twitter_click('{{escapeString slug}} via @ICJIA_Illinois')" target="_blank" data-toggle="tooltip" data-placement="right" title="Share on Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+  </li>
 
- <!--<a href="#" class="social pdf"><i style="" class="fa fa-file-pdf-o fa-lg"></i></a>-->
+  <li>
+    <a href="#" class="social facebook" onclick="return fbs_click('{{constructCanonical site.domain site.root this.page.dest}}','{{escapeString slug}}')" target="_blank" data-toggle="tooltip" data-placement="right" title="Share on Facebook"><i style="" class="fa fa-facebook-square fa-2x"></i></a>
 
-</div>
+  </li>
+
+<!--	<li>
+    <a href="#" class="social print" data-toggle="tooltip" data-placement="right" title="Print page"><i style="" class="fa fa-print fa-2x"></i></a>
+
+  </li>-->
+
+  <li>
+    <a href="javascript:void(0);" id="adjust-font" class="social adjust-font" data-toggle="tooltip" data-placement="right" title="Adjust font size">
+      <span style="font-size: 30px; font-weight: 700">A</span><span style="font-size: 24px; font-weight: 700">A</span>
+    </a>
+
+  </ul>
 
 
 
@@ -104,7 +118,7 @@ p {margin-left: 10px}
   <p>A <a href="https://www.amacad.org/content/Research/researchproject.aspx?d=63">research study</a> found that one-third of the black male high school dropouts under the age of 40 are incarcerated. In addition, black children are almost <a href="http://www.bjs.gov/index.cfm?ty=pbdetail&amp;iid=981">nine times more likely</a> to suffer the effects of an imprisoned parent than white children; Hispanic children are three times more likely.</p>
   <p>The number of women incarcerated increased by nearly twice the rate of men between 1980 and 2010, with more than <a href="http://www.bjs.gov/content/pub/pdf/p10.pdf">200,000 women</a> imprisoned. The imprisonment rate of black women (113 per 100,000) was <a href="http://www.bjs.gov/content/pub/pdf/p13.pdf">twice the rate</a> of white women (51 per 100,000).</p>
   <div  id="causes" class="section-spacer"></div>
-  <h3 id="causes-of-population-growth">Causes of population growth</h3>
+  <h3 id="causes-of-population-growth">Causes</h3>
   <p>U.S. growth in imprisonment can be attributed to changes in law and policy that increased prison sentence probability and extended the lengths of prison sentences.</p>
   <p>Indeterminate sentencing allows parole or prisoner review boards to determine when prison inmates will be released. But in the 1970s, many states ended indeterminate <a href="http://www.nap.edu/openbook.php?record_id=18613">sentencing</a>—including Illinois in 1978—for determinate sentencing, which increased the length of prison sentences.</p>
   <p>Truth-in-sentencing measures requiring violent offenders to serve at least 85 percent of their sentence have contributed to the increased growth with longer periods of imprisonment. “Three-strikes” legislation created to imprison repeat felony offenders also has had an effect. Increased sentences for a third felony were thought to deter criminals from committing additional crimes. (This law does not apply to the state of Illinois).</p>

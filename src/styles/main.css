@@ -74,6 +74,23 @@ a.social.email:hover {color: #f44013}
 a.social.pdf {color: #aaa}
 a.social.pdf:hover {color: #f44013}
 
+a.social.adjust-font {color: #aaa}
+a.social.adjust-font:hover {color: #f44013}
+
+
+
+ul.social-sidebar
+{
+  list-style-type: none;
+
+}
+
+ul.social-sidebar {margin-top: 25px}
+
+ul.social-sidebar li {border-top: 1px solid #ccc; padding-top: 10px; padding-bottom: 10px; width: 40px}
+/*ul.social-sidebar li:first-of-type {border-top: none;}*/
+ul.social-sidebar li:last-of-type {border-bottom: 1px solid #ccc;}
+
 
 .breadcrumb {background-color: #fff !important}
 
