@@ -37,20 +37,20 @@ function fbShare(url, title, descr, winWidth, winHeight) {
 /* Custom function for Facebook sharewindow version 2.0 */
 
 function fbs_click(u, t) {
-	//u = location.href;
-	//t = document.title;
-	window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) +
-		'&t=' + encodeURIComponent(t), 'sharer',
-		'toolbar=0,status=0,width=626,height=436');
-	return false;
+  //u = location.href;
+  //t = document.title;
+  window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) +
+    '&t=' + encodeURIComponent(t), 'sharer',
+    'toolbar=0,status=0,width=626,height=436');
+  return false;
 }
 
 function twitter_click(t) {
 
-	window.open('http://twitter.com/share?text=' + encodeURIComponent(t),
-		'sharer',
-		'toolbar=0,status=0,width=626,height=436');
-	return false;
+  window.open('http://twitter.com/share?text=' + encodeURIComponent(t),
+    'sharer',
+    'toolbar=0,status=0,width=626,height=436');
+  return false;
 }
 
 
@@ -60,240 +60,283 @@ function twitter_click(t) {
  * returns version of IE or false, if browser is not Internet Explorer
  */
 function detectIE() {
-	var ua = window.navigator.userAgent;
+  var ua = window.navigator.userAgent;
 
-	var msie = ua.indexOf('MSIE ');
-	if (msie > 0) {
-		// IE 10 or older => return version number
-		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-	}
+  var msie = ua.indexOf('MSIE ');
+  if (msie > 0) {
+    // IE 10 or older => return version number
+    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+  }
 
-	var trident = ua.indexOf('Trident/');
-	if (trident > 0) {
-		// IE 11 => return version number
-		var rv = ua.indexOf('rv:');
-		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-	}
+  var trident = ua.indexOf('Trident/');
+  if (trident > 0) {
+    // IE 11 => return version number
+    var rv = ua.indexOf('rv:');
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+  }
 
-	var edge = ua.indexOf('Edge/');
-	if (edge > 0) {
-		// IE 12 => return version number
-		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-	}
+  var edge = ua.indexOf('Edge/');
+  if (edge > 0) {
+    // IE 12 => return version number
+    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+  }
 
-	// other browser
-	return false;
+  // other browser
+  return false;
+}
+
+String.prototype.capitalizeFirstLetter = function() {
+  return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
 
 
 $(document).ready(function() {
 
-	var clickCount = 0;
-	var direction = '+';
+  var clickCount = 0;
+  var direction = '+';
 
-	$(function() {
-		$('[data-toggle="tooltip"]').tooltip();
-	});
-
-
-
-	/* ------------------ Font adjuster --------------------- */
-
-	// $('#adjust-font').click(function() {
-	// 	var direction = '+';
-	// 	var curSize = parseInt($('.article-content').css('font-size'));
-	// 	var maxSize = 28;
-	// 	var minSize = 22;
-	//
-	// 	if (curSize > maxSize) {
-	//
-	// 		curSize = minSize;
-	// 		direction = '+';
-	// 	}
-	//
-	// 	if (curSize < minSize - 1) {
-	//
-	// 		curSize = maxSize;
-	// 		direction = '-';
-	//
-	// 	}
-	//
-	// 	if (direction === '+') {
-	// 		curSize = curSize + 1;
-	// 	}
-	//
-	// 	if (direction === '-') {
-	// 		curSize = curSize - 1;
-	// 	}
-	//
-	//
-	//
-	// 	console.log('Current font size: ' + curSize);
-	// 	console.log('Current direction: ' + direction);
-	//
-	// 	$('.article-content').css('font-size', curSize);
-	// 	// Re-calculate the progress bar for the page
-	// 	progressBarInit();
-	//
-	// });
-
-	$('#adjust-font').click(function() {
-
-		var size;
-		var sizeLabel;
-
-		clickCount = clickCount + 1;
-
-		$('.article-content > *').css('font-size', function(i, value) {
-
-
-			if (direction === '+') {
-				size = parseInt(value) + 1;
-			}
-
-			if (direction === '-') {
-				size = parseInt(value) - 1;
-			}
+  $(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
 
 
 
-			return size;
-		});
+  /* Meeting page filter *************************************** */
 
-		progressBarInit();
+  // $('#meeting-filter').show();
+  //
+  // $(".chosen-select").chosen({
+  //   max_selected_options: 5
+  // });
+  //
+  // $('.chosen-select').on('change', function(evt, params) {
+  //   //console.log($('.chosen-select').chosen().val());
+  //   var filterValue = $('.chosen-select').chosen().val();
+  //   var filterString = "";
+  //   if (filterValue != null && filterValue !== undefined) {
+  //     var arrayLength = filterValue.length;
+  //     for (var i = 0; i < arrayLength; i++) {
+  //
+  //       filterString = filterString + '.' + filterValue[i].toLowerCase();
+  //       if (i + 1 != arrayLength) {
+  //         filterString = filterString + ', ';
+  //       }
+  //
+  //     }
+  //
+  //   } else {
+  //     filterString = "*";
+  //   }
+  //
+  //   console.log(filterString);
 
-		if (clickCount > 3) {
+  /* Isotope filter *************************************** */
 
-			if (direction === '+') {
-				direction = '-';
-			} else if (direction === '-') {
-				direction = '+';
-			}
-
-			clickCount = 0;
-		}
-
-		if (clickCount == 0) {
-			if (direction === '+') {
-				sizeLabel = 'Default';
-				$('#sizeLabel').html(sizeLabel);
-			} else {
-				sizeLabel = '';
-				$('#sizeLabel').html('');
-			}
-		} else {
-			sizeLabel = '';
-			$('#sizeLabel').html('');
-		}
-
-		console.log('clickCount: ' + clickCount);
-		console.log('direction: ' + direction);
-		console.log('sizeLabel: ' + sizeLabel);
-
-
-	});
-
-	// $('#adjust-font').click(function() {
-	// 	clickCount = clickCount + 1;
-	// 	if (clickCount >= 4) {
-	// 		clickCount = 0;
-	// 		if (direction === '+') {
-	// 			direction = '-';
-	// 		} else {
-	// 			direction = '+';
-	// 		}
-	// 	}
-	// 	$('.article-content > *').css('font-size', function(i, value) {
-	// 		console.log('Click count: ' + clickCount)
-	// 		if (direction === '+') {
-	// 			return parseInt(value) * 1.1;
-	// 		} else {
-	// 			return parseInt(value) / 1.1;
-	// 		}
-	// 	});
-	// });
+  //   $container.isotope({
+  //     filter: filterString
+  //   });
+  // });
 
 
-	var $container = $('#news-container');
-	// init
-	$container.isotope({
-		// options
-		itemSelector: '.news-item',
-		layoutMode: 'fitRows'
-	});
+  var $container = $('#news-container');
+  // init
+  $container.isotope({
+    // options
+    itemSelector: '.news-item',
+    layoutMode: 'fitRows'
+  });
 
 
 
-	// filter items on button click
-	$('#filters').on('click', 'button', function() {
-		$('button').removeClass('active');
-		var filterValue = $(this).attr('data-filter');
-		$container.isotope({
-			filter: filterValue
-		});
-		$(this).addClass('active');
-	});
+  // filter items on button click
+  $('#filters').on('click', 'button', function() {
+    $('button').removeClass('active');
+    var filterValue = $(this).attr('data-filter');
+    $container.isotope({
+      filter: filterValue
+    });
+    $(this).addClass('active');
+  });
 
 
 
-	if ($("html").hasClass("oldie")) {
-		$('#progressBar').hide();
-	};
+  /* ------------------ Font adjuster --------------------- */
 
-	$('.expander').readmore({
-		speed: 175,
-		collapsedHeight: 100,
-		moreLink: '<a href="#"><span class="expand-style">More&nbsp;<i class="fa fa-angle-double-right"></i></span></a>',
-		lessLink: '<a href="#"><span class="expand-style"><i class="fa fa-angle-double-left"></i>&nbsp;</span></a>',
-		afterToggle: function() {
-			progressBarInit();
-		}
-	});
+  // $('#adjust-font').click(function() {
+  // 	var direction = '+';
+  // 	var curSize = parseInt($('.article-content').css('font-size'));
+  // 	var maxSize = 28;
+  // 	var minSize = 22;
+  //
+  // 	if (curSize > maxSize) {
+  //
+  // 		curSize = minSize;
+  // 		direction = '+';
+  // 	}
+  //
+  // 	if (curSize < minSize - 1) {
+  //
+  // 		curSize = maxSize;
+  // 		direction = '-';
+  //
+  // 	}
+  //
+  // 	if (direction === '+') {
+  // 		curSize = curSize + 1;
+  // 	}
+  //
+  // 	if (direction === '-') {
+  // 		curSize = curSize - 1;
+  // 	}
+  //
+  //
+  //
+  // 	console.log('Current font size: ' + curSize);
+  // 	console.log('Current direction: ' + direction);
+  //
+  // 	$('.article-content').css('font-size', curSize);
+  // 	// Re-calculate the progress bar for the page
+  // 	progressBarInit();
+  //
+  // });
+
+  $('#adjust-font').click(function() {
+
+    var size;
+    var sizeLabel;
+
+    clickCount = clickCount + 1;
+
+    $('.article-content > *').css('font-size', function(i, value) {
+
+
+      if (direction === '+') {
+        size = parseInt(value) + 1;
+      }
+
+      if (direction === '-') {
+        size = parseInt(value) - 1;
+      }
 
 
 
-	/* ---------------------------------------------- Sticky sidebar ------------------------------------*/
+      return size;
+    });
 
-	/* activate sidebar */
-	$('#sidebar-photo').affix({
-		offset: {
-			top: 485
-		}
-	});
+    progressBarInit();
 
-	/* activate sidebar */
-	$('#sidebar-no-photo').affix({
-		offset: {
-			top: 55
-		}
-	});
+    if (clickCount > 3) {
 
-	/* activate scrollspy menu */
-	var $body = $(document.body);
-	var navHeight = $('.navbar').outerHeight(true) + 10;
+      if (direction === '+') {
+        direction = '-';
+      } else if (direction === '-') {
+        direction = '+';
+      }
 
-	$body.scrollspy({
-		target: '#leftCol',
-		offset: navHeight
-	});
+      clickCount = 0;
+    }
 
-	/* smooth scrolling sections */
-	$('a[href*=#]:not([href=#])').click(function() {
-		if (location.pathname.replace(/^\//, '') == this.pathname.replace(
-				/^\//,
-				'') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) +
-				']');
-			if (target.length) {
-				$('html,body').animate({
-					scrollTop: target.offset().top - 50
-				}, 1500);
-				return false;
-			}
-		}
-	});
+    if (clickCount == 0) {
+      if (direction === '+') {
+        sizeLabel = 'Default';
+        $('#sizeLabel').html(sizeLabel);
+      } else {
+        sizeLabel = '';
+        $('#sizeLabel').html('');
+      }
+    } else {
+      sizeLabel = '';
+      $('#sizeLabel').html('');
+    }
+
+    console.log('clickCount: ' + clickCount);
+    console.log('direction: ' + direction);
+    console.log('sizeLabel: ' + sizeLabel);
+
+
+  });
+
+  // $('#adjust-font').click(function() {
+  // 	clickCount = clickCount + 1;
+  // 	if (clickCount >= 4) {
+  // 		clickCount = 0;
+  // 		if (direction === '+') {
+  // 			direction = '-';
+  // 		} else {
+  // 			direction = '+';
+  // 		}
+  // 	}
+  // 	$('.article-content > *').css('font-size', function(i, value) {
+  // 		console.log('Click count: ' + clickCount)
+  // 		if (direction === '+') {
+  // 			return parseInt(value) * 1.1;
+  // 		} else {
+  // 			return parseInt(value) / 1.1;
+  // 		}
+  // 	});
+  // });
+
+
+
+  if ($("html").hasClass("oldie")) {
+    $('#progressBar').hide();
+  };
+
+  $('.expander').readmore({
+    speed: 175,
+    collapsedHeight: 100,
+    moreLink: '<a href="#"><span class="expand-style">More&nbsp;<i class="fa fa-angle-double-right"></i></span></a>',
+    lessLink: '<a href="#"><span class="expand-style"><i class="fa fa-angle-double-left"></i>&nbsp;</span></a>',
+    afterToggle: function() {
+      progressBarInit();
+    }
+  });
+
+
+
+  /* ---------------------------------------------- Sticky sidebar ------------------------------------*/
+
+  /* activate sidebar */
+  $('#sidebar-photo').affix({
+    offset: {
+      top: 485
+    }
+  });
+
+  /* activate sidebar */
+  $('#sidebar-no-photo').affix({
+    offset: {
+      top: 55
+    }
+  });
+
+  /* activate scrollspy menu */
+  var $body = $(document.body);
+  var navHeight = $('.navbar').outerHeight(true) + 10;
+
+  $body.scrollspy({
+    target: '#leftCol',
+    offset: navHeight
+  });
+
+  /* smooth scrolling sections */
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(
+        /^\//,
+        '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(
+          1) +
+        ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 1500);
+        return false;
+      }
+    }
+  });
 
 
 
