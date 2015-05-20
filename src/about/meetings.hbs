@@ -35,13 +35,12 @@ navSort: 100
 
 
 
-    <div id="meeting-filter" class="well hidden-xs" style="margin-top: 50px">
+    <!-- <div id="meeting-filter" class="well hidden-xs" style="margin-top: 50px">
               <em>Filter:&nbsp;</em>
               <select data-placeholder="Click here to select filter(s)" style="width:350px;" multiple class="chosen-select" tabindex="8" >
 
 
                 <option >Commission</option>
-                <!--<option >Subcommittee</option>-->
                 <option >Law</option>
                 <option >Jails</option>
                 <option >Corrections</option>
@@ -51,21 +50,46 @@ navSort: 100
                 <option >Training</option>
 
               </select>
-            </div>
+            </div> -->
+
+<style>
+button.multiselect {width: 240px}
+.multiselect-container {width: 240px}
+#example { visibility: hidden;}
+</style>
+
+<div class="well" style="margin-top: 35px;">
+  <center>
+    <h4 style="display: inline; margin: 0; padding: 0; font-family: 'Oswald', sans-serif;">Select categories: &nbsp; &nbsp;</h4>
+            <select id="example" multiple="multiple" style="display: inline;">
+              <optgroup label="Commission & Subcommittees">
+                <option value="commission">Commission</option>
 
 
+                <option value="law">Law</option>
+                <option value="jails">Jails</option>
+                <option value="corrections">Corrections</option>
+                <option value="budget">Budget and Capacity</option>
+                <option value="implementation">Implementation</option>
+                </optgroup>
+                <optgroup label="Materials">
+                  <option value="materials">Handouts / Presentations</option>
+                <option value="training">Training</option>
+                </optgroup>
+            </select>
+          </center>
 
-
+</div>
 
 
 
 
       <div id="news-container">
 
-        <div class="news-item subcommittee">
+        <div class="news-item budget">
           <span class="news-category">SUBCOMMITTEE MEETINGS</span>&nbsp<span class="news-date">05.18.2015</span>
-          <h2 >Subcommittee on Budget and Capacity to meet on Monday, May 21 2015 </h2>
-          <p>Subcommittee on Budget and Capacity to meet on Monday, May 21 2015 on Thursday, May 21, 2015 from
+          <h2 >Subcommittee on Budget and Capacity to meet on Thursday, May 21 2015 </h2>
+          <p>Subcommittee on Budget and Capacity to meet on Thursday, May 21, 2015 from
   8:00 a.m. to 9:00 p.m. at  401 S. Spring, Room 621, Springfield, IL.</p>
 
   <p><i class="fa fa-angle-double-right"></i>&nbsp;<a href="{{assets}}pdf/5_21 budget_agenda.pdf" onclick="ga('send', 'event', 'Downloads', 'Click', '5_21 budget_agenda.pdf')">Download the agenda&nbsp;<i class="fa fa-file-pdf-o"></i></a></p>
@@ -83,7 +107,7 @@ navSort: 100
         </div>
 
 
-        <div class="news-item subcommittee jails">
+        <div class="news-item jails">
           <span class="news-category">SUBCOMMITTEE MEETINGS</span>&nbsp<span class="news-date">05.11.2015</span>
           <h2 >Subcommittee on Jails to meet on Monday, May 28 2015 </h2>
           <p>The Subcommittee on Jails will meet on Monday, May 28 2015 at 10:30am in the Stratton Building, Room 348-N, 401 South Spring Street, Springfield, Illinois 62794.</p>
@@ -92,7 +116,7 @@ navSort: 100
 
         </div>
 
-        <div class="news-item subcommittee law">
+        <div class="news-item law">
           <span class="news-category">SUBCOMMITTEE MEETINGS</span>&nbsp<span class="news-date">05.11.2015</span>
           <h2 >Subcommittee on Law to meet on Thursday, May 14 2015 </h2>
           <p>The Subcommittee on Law will meet on Thursday, May 14 2015 from 11am to 1pm in Room 348, N Stratton Building, State Capitol, Springfield, Illinois 62794.</p>
@@ -105,7 +129,7 @@ navSort: 100
 
 
 
-        <div class="news-item materials commission">
+        <div class="news-item materials">
           <span class="news-category">MATERIALS</span>&nbsp<span class="news-date">05.05.2015</span>
           <h2 >Presentations from the 04.25.2015 Commission Meeting</h2>
 
@@ -131,7 +155,7 @@ navSort: 100
 
 
 
-        <div class="news-item subcommittee jails">
+        <div class="news-item jails">
           <span class="news-category">SUBCOMMITTEE MEETINGS</span>&nbsp<span class="news-date">04.30.2015</span>
           <h2 >Subcommittee on Jails to meet on Monday, May 4 2015 </h2>
           <p>The Illinois Department of Corrections Commission on Criminal Justice and Sentencing Reform Jails subcomittee will meet Monday, May 4, 2015 at 10:30am at 1301 Concordia Ct., Executive Conference Room, Springfield, Illinois 62794.</p>
@@ -154,8 +178,8 @@ navSort: 100
 
 
 
-        <div class="news-item commission materials">
-          <span class="news-category">MATERIALS</span>&nbsp<span class="news-date">04.24.2015</span>
+        <div class="news-item commission">
+          <span class="news-category">MINUTES</span>&nbsp<span class="news-date">04.24.2015</span>
           <h2 >Minutes from the 03.26.15 Commission meeting available</h2>
           <p>Minutes from the March 26, 2015 Commission meeting are now available.</p>
 
@@ -182,7 +206,7 @@ navSort: 100
 
 
 
-        <div class="news-item subcommittee implementation">
+        <div class="news-item implementation">
           <span class="news-category">SUBCOMMITTEE MEETINGS</span>&nbsp<span class="news-date">04.23.2015</span>
           <h2 >Subcommittee on Implementation to meet on Saturday, April 25 2015 </h2>
           <p>The Implementation subcomittee for the Illinois State Commission on Criminal Justice and Sentencing Reform will meet Saturday, April 25 from 12:00 p.m. to 12:45pm in Kasbeer Hall at Corboy Law Center, 15th Floor, Loyola University Chicago, Water Tower Campus, 25 East Pearson Ave., Chicago, IL  60611
@@ -196,7 +220,7 @@ navSort: 100
 
 
 
-        <div class="news-item subcommittee law">
+        <div class="news-item law">
           <span class="news-category">SUBCOMMITTEE MEETINGS</span>&nbsp<span class="news-date">04.22.2015</span>
           <h2 >Subcommittee on Law to meet on Saturday, April 25 2015 </h2>
           <p>The Law subcomittee for the Illinois State Commission on Criminal Justice and Sentencing Reform will meet Saturday, April 25 from 12:15 p.m. to 1pm in Kasbeer Hall at Corboy Law Center, 15th Floor, Loyola University Chicago, Water Tower Campus, 25 East Pearson Ave., Chicago, IL  60611
@@ -217,7 +241,7 @@ navSort: 100
 
 
 
-        <div class="news-item subcommittee budget">
+        <div class="news-item budget">
           <span class="news-category">SUBCOMMITTEE MEETINGS</span>&nbsp<span class="news-date">04.21.2015</span>
           <h2 >Subcommittee on Budget and System Capacity to meet on Saturday, April 25 2015 </h2>
           <p>The Budget and System Capacity subcomittee for the Illinois State Commission on Criminal Justice and Sentencing Reform will meet Saturday, April 25 at 12:00 p.m. in Kasbeer Hall at Corboy Law Center, 15th Floor, Loyola University Chicago, Water Tower Campus, 25 East Pearson Ave., Chicago, IL  60611
@@ -228,8 +252,8 @@ navSort: 100
         </div>
 
 
-        <div class="news-item commission materials" style="width: 100%">
-          <span class="news-category">MATERIALS</span>&nbsp<span class="news-date">04.13.2015</span>
+        <div class="news-item commission" style="width: 100%">
+          <span class="news-category">AUDIO</span>&nbsp<span class="news-date">04.13.2015</span>
           <h2 >Full audio of 03.26.2015 Commission meeting now available</h2>
           <p>Click to listen to the audio.</p>
           <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/200210572&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
@@ -309,7 +333,7 @@ navSort: 100
 
 
 
-        <div class="news-item commission materials">
+        <div class="news-item materials">
           <span class="news-category">MATERIALS</span>&nbsp<span class="news-date">04.06.2015</span>
           <h2 >Handouts from the March 26 Commission Meeting</h2>
 

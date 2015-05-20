@@ -51,9 +51,13 @@
 		<!-- endbuild -->
 		<!-- build:css(src) {{assets}}styles/main.css -->
 		<link rel="stylesheet" href="{{assets}}styles/main.css">
+		<link rel="stylesheet" href="{{assets}}_bower_components/bootstrap-multiselect/dist/css/bootstrap-multiselect.css" type="text/css"/>
+
 		<!-- endbuild -->
 
-		<link rel="stylesheet" href="{{assets}}_bower_components/chosen/chosen.min.css">
+
+
+		<!--<link rel="stylesheet" href="{{assets}}_bower_components/chosen/chosen.min.css">-->
 
 		<!-- build:js(src) {{assets}}scripts/vendor/modernizr.js -->
 		<script src="{{assets}}_bower_components/modernizr/modernizr.js"></script>
@@ -68,6 +72,13 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+
+		<!-- build:js(src) {{assets}}scripts/vendor/multiselect.js -->
+		<script type="text/javascript" src="{{assets}}_bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect.js">
+		</script>
+		<!-- endbuild -->
+
+
 
 		<script>
 		// example.com?param1=name&param2=&id=6
@@ -176,8 +187,10 @@
   ga('send', 'pageview');
 
 </script>
+<!--
 
 <script src="{{assets}}_bower_components/chosen/chosen.jquery.min.js"></script>
+-->
 
 
 
