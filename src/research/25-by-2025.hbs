@@ -11,12 +11,20 @@ keywords:
 - prison
 chartDataJS: "highcharts-25-by-2025.js"
 ---
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: 'Oswald', san-serif;}
+h3 {text-transform: uppercase; margin-top: 35px; margin-bottom: 10px}
+h4 {color: #666; margin-top: 15px; margin-bottom: 10px}
+p {margin-left: 10px}
+</style>
+
+
 <div class="container-fluid mosaic-container">
 
 <div class="col-md-12 col-sm-12 col-xs-12 mosaic-well">
   <div style="height: 350px;" >
     <div class="overlay" style="height: 450px; background-image: url('{{assets}}img/staircase.jpg')">
-    
+
         <div class="mosaic-tall-headline dark">
 
         </div>
@@ -36,6 +44,42 @@ chartDataJS: "highcharts-25-by-2025.js"
 
   <div class="col-md-3" id="leftCol">
 
+    <div id="sidebar-photo" class="hidden-xs hidden-sm">
+
+
+ <ul class="social-sidebar">
+
+			<li>
+
+		<a href="javascript:void(0);" class="social twitter" onclick="return twitter_click('{{escapeString slug}} via @ICJIA_Illinois')" target="_blank" data-toggle="tooltip" data-placement="right" title="Share on Twitter"><i class="fa fa-twitter fa-2x"></i></a>
+	</li>
+
+	<li>
+		<a href="#" class="social facebook" onclick="return fbs_click('{{constructCanonical site.domain site.root this.page.dest}}','{{escapeString slug}}')" target="_blank" data-toggle="tooltip" data-placement="right" title="Share on Facebook"><i style="" class="fa fa-facebook-square fa-2x"></i></a>
+
+	</li>
+
+<!--	<li>
+		<a href="#" class="social print" data-toggle="tooltip" data-placement="right" title="Print page"><i style="" class="fa fa-print fa-2x"></i></a>
+
+	</li>-->
+
+	<li>
+		<a href="javascript:void(0);" id="adjust-font" class="social adjust-font" data-toggle="tooltip" data-placement="right" title="Adjust font size" style="text-decoration: none !important;">
+			<span style="font-size: 30px; font-weight: 700">A</span><span style="font-size: 24px; font-weight: 700">A</span>
+
+		</a>
+		<div id="sizeLabel" style="color: #f44013; font-size: 10px; text-transform: uppercase;">Default</div>
+	</li>
+
+
+	</ul>
+
+
+
+
+</div>
+
 </div><!--/left-->
   <div class="col-md-7">
     <progress value="0" id="progressBar" class="flat">
@@ -46,73 +90,62 @@ chartDataJS: "highcharts-25-by-2025.js"
     <div class="article">
       <span class="article-date">{{site.title}}</span>
 
-    <h1 id="25%-by-2025" class="article-headline">25% by 2025 : Reducing the Prison Population</h1>
+    <h1 id="25%-by-2025" class="article-headline">25% by 2025: Reducing the Prison Population by 25%</h1>
     <div class="article-content">
 
 
-      <h3>Data coming soon</h3>
+      <h3 id="what-does-a-25-reduction-look-like">What does a 25% reduction look like?</h3>
 
-      <div style="height: 800px"></div>
+<p class="drop" >Governor Rauner's Executive Order states the commission shall make recommendations for amendments to state law to reduce the prison population in Illinois by 25 percent from the current levels. Figure 1 shows annual prison populations through 2014, a projection of population growth based on trends from 2002 to 2013, and two 25-percent reductions - one showing current population and one showing the projected population.</p>
 
-<!-- <h2 id="what-does-a-25-reduction-look-like">What does a 25% reduction look like?</h2>
-
-<p>A 25% reduction in the IDOC population involves making certain assumptions or projections on what the size of the prison population would be without the reduction. Figure 1 shows the IDOC prison population since 1989 and three different trend lines extended to the year 2025. The trend lines illustrate possible population growth based on the historical trends.</p>
 <div class="HC_Container">
-  <div id="HC2025_Fig1"></div>
+	<div id="HC_20by2025_fig1"></div>
 </div>
-<i>SPAC implemented a linear projection method based on various starting points (SPAC analyzed several other methods of projecting the population and none varied significantly). Multivariate analysis methods produced estimates between 49,671 and 62,494. These models were highly accurate for past populations, but further evaluation is necessary to verify the models' logic.</i>
-
-<p>The black dashed line from 2014 to 2024 is the IDOC Research and Planning Unit's population projection reaching 55,161 inmates by 2024. This calculation incorporates IDOC's internal length of stay estimates for the current population. The colored lines are SPAC's linear trend lines based solely on historical data. The length of data examined is delineated by the colored vertical lines. The sentencing patterns have changed sufficiently since 1989 such that the green line is likely the most appropriate trend, suggesting a ten-year population of 55,450. The red line follows the trend from 1989 to today, estimating the ten-year population of 59,698. The purple line tracks the slight downward of the most recent three years to estimate an IDOC population of 48,271 in 2025. The purple line is the least likely because it fails to capture the long-term impact of truth-in-sentencing laws which increase the length of stay of a smaller number of inmates sufficiently to offset an overall downward trend in admissions.</p>
-<div class="HC_Container">
-<div id="HC2025_Fig2"></div>
-</div>
-<p>Figure 2 shows the path to a 25% reduction from the twelve-year trend in the prison population and a 25% reduction from the current IDOC population. To achieve a permanent, sustainable reduction in the prison population, policy must rely on the best Illinois-specific research of what drives our population. SPAC research, supported by both IDOC and ICJIA analysis, has two primary drivers of the population: admissions, including persistently high recidivism rates for the past decade, and increasing lengths of stay. Policy makers should use data and simulation to think about strategies to reach the 25% reduction goal.</p>
 
 
+<h3 id="two-policy-options-reducing-admissions-and-lengths-of-stay">Two Policy Options: Reducing Admissions and Lengths of Stay</h3>
 
-<h2 id="two-levers-admissions-and-length-of-stay">Two levers - Admissions and Length of Stay</h2>
+<p>National and Illinois-specific research by the Sentencing Policy Advisory Council (SPAC), ICJIA, and Loyola University showed two factors that increase the prison population and could be addressed with changes in policies: admissions and increased lengths of stay. Solutions vary by cost, impact on public safety, and a time commitment by the justice system and the public.</p>
+<h3>Prison Admissions</h3>
 
-<p>One lever to reduce the prison population is simply to reduce admissions. Possible ways to do so include:</p>
+<p>Admissions can be reduced with prison diversion initiatives and a change in parole policy to decrease the number of offenders returning to prison due to technical violations. A reduction in recidivism also could be achieved with evidence based programming in diversions, in prison, during reentry, and in the community.</p>
 
+<p>Diverting low risk offenders who would likely spend less than a year in prison slightly reduces prison population while providing community-based treatment for offenders. Implementing presumptive sentencing to probation for Class 3 and 4 offenders who have never been on probation in the past and no prior violent convictions could remove 2,000 to 3,000 prison admissions per year. </p>
+
+<p>The <a href="http://www.icjia.state.il.us/public/redeploy/index.cfm">Adult Redeploy Illinois (ARI) program</a> allows judges and prosecutors to divert individuals who would otherwise be sentenced to IDOC into probation-based community treatment modalities such as drug and specialty courts and intensive probation. ARI programs are available in nearly 40 counties across the state and could easily expand with additional funding and community collaboration. </p>
+
+<p>Changes to parole policies and parole staffing levels have corresponded to a substantial increase in the rate of technical violators returning to Illinois prison over the past 20 years. See <a href="http://www.icjia.state.il.us/spac/pdf/SPAC%20Report%20MSR%20violator%209-13.pdf">SPAC's Drivers of the Sentenced Population: MSR Violators</a> for a detailed examination.</p>
+
+<p>Evidence-based offender treatment in prisons and in communities can reduce recidivism and an ultimate return to prison. Recidivism, defined here as a return to prison within three years of release, has hovered at about 50 percent over the last decade. Evaluations of the <a href="http://www.icjia.state.il.us/public/pdf/ResearchReports/Sheridan_6_year_eval_report_01_2011.pdf">Sheridan</a> and <a href="http://www.icjia.state.il.us/public/pdf/ResearchReports/SWICC_Year_3_Evaluations_Report_March_2011.pdf">Southwestern Illinois Correctional Center (SWICC)</a> drug treatment programs showed the programs contribute to reductions in recidivism. The need for drug treatment among offenders far exceeds program availability, however. </p>
+
+<h3>Length of Stay in Prison</h3>
+
+<p>Changing lengths of stay also may reduce the size of the prison population. Lengths of prison stays could be impacted by: <br>
 <ul>
-<li>Prison diversion</li>
-<li>Changing parole policies</li>
-<li>Sentencing law changes</li>
-<li>Reduce recidivism through evidence based programming in diversions, in prison, during reentry, and in the community</li>
+<li>Changing the sentence length ranges for felony classes.</li>
+<li>Awarding credits for good conduct, treatment participation, etc.</li>
+<li>Reducing required percentages of imprisonment in sentences handed down under Truth-in-Sentencing laws.</li>
+<li>Using risk and needs assessment to guide sentencing and lengths of stay.</li>
 </ul>
+</p>
 
-<p>A second lever to reduce the size of the prison population is to change the sentence lengths statutorily. Possible avenues to do so include:</p>
+<p>Statutory changes to sentencing laws could be made to reduce lengths of stay, such as reducing the sentence minimums and maximums within each felony class. For example, <a href="http://www.ilga.gov/commission/lru/2010PFC.pdf">Class X felonies have mandatory minimum prison sentences of six to thirty years</a>. Converting Class X drug offenses to <a href="http://www.ilga.gov/commission/lru/2010PFC.pdf">Class 1 (a four- to 15-year sentence range)</a> would allow a reduced, but still fairly long, incarceration period and allow probation in some cases.</p>
 
-<ul>
-<li>Changing the sentence range for felony classes</li>
-<li>Awarding various credits for good conduct, treatment participation, etc.</li>
-<li>Sentencing law changes that reduce length of stay</li>
-<li>Making length of stay and/or sentencing, including targeted early release, based on risk and needs assessment</li>
-</ul>
+<p>Increasing access to these credits is a low cost option that decreases lengths of stay, encourages participation in rehabilitative programming, and reward goods conduct. <a href="http://www.icjia.state.il.us/spac/pdf/SPAC%20Report%20Time%20Served%209-13.pdf">Allowing more inmates to receive and accumulate good conduct and sentence credits could reduce the lengths of stay while providing an incentive for prisoners to behave and prepare for community reentry.</a></p>
 
-<p>Illinois already has in place a prison diversion program called Adult Redeploy Illinois (ARI). ARI allows judges and prosecutors to place individuals who would be sentenced to IDOC in probation-based community treatment modalities such as drug and specialty courts, intensive probation, etc. As of April 2015, ARI has been implemented in nearly 40 counties in Illinois, but given additional resources it could expand. More information about ARI is available on the <a href="http://www.icjia.org/public/redeploy/">ARI website</a>.</p>
+<p>Current program credit restrictions allow inmates to receive one half-day credit for each day of certain rehabilitative programming upon program completion. However, certain offenses and prior prison stays may restrict availability of this credit. </p>
 
-<p>Various changes to parole policies and parole staffing levels have corresponded to changes in the rate of technical violation returns to Illinois prison substantially in the past twenty years. A detailed examination of this can be found in the [SPAC publication Drivers of the Sentenced Population: MSR Violators](<a href="http://www.icjia.state.il.us/spac/pdf/SPAC">http://www.icjia.state.il.us/spac/pdf/SPAC</a> Report MSR violator 9-13.pdf).</p>
+<p>Another credit type, Meritorious and Supplemental Meritorious Good Time credits were eliminated for most inmates in state fiscal year 2011. This added two to three months of time to all prisoners' lengths of stay. </p>
 
-<p>Various changes to sentencing laws may reduce admissions and/or time served. Presumptive sentencing, where every criminal case presumes that the minimum penal policy be applied, may reduce prison admissions for offenses where both probation and prison are sentencing options. <a href="http://www.nap.edu/catalog/18613/the-growth-of-incarceration-in-the-united-states-exploring-causes">The National Research Council Committee on Law and Justice concluded that presumptive sentencing guidelines in other states show evidence of controlling the growth of the prison population</a>. Other statutory changes could also be made, such as reducing the sentence minimum and maximum lengths within each felony class, making more offenses eligible for probation, and reducing the percentage required to serve in prison under truth-in-sentencing laws.</p>
+<p>Truth-in-sentencing laws require that 100, 85, or 75 percent of the actual sentence is served, based on offense. For example, someone sentenced to 10 years in prison would serve 8.5 years in prison under the 85 percent truth-in-sentencing requirement. Reducing the percentage of stay lengths required under truth-in-sentencing laws by as little as five to 10 percent would decrease bed-years (number of years a person will actually spend in prison) of the prison population substantially without drastically altering the amount of time these individuals typically serve. This small change applied to one thousand inmates would save one thousand bed-years. </p>
 
-<p>Prison and community based treatment that is evidence based can reduce recidivism, which in turn reduces the rate at which offenders return to prison. Recidivism, defined here as a return to prison within three years of release, has hovered at approximately 50% for the last decade. Evaluations of the Sheridan and SWICC drug treatment programs have demonstrated that those programs cause reductions in recidivism. </p>
+<h3 id="risk-and-needs-assessment">Risk and Needs Assessment</h3>
 
-<p>Risk assessment can be used at various points in the criminal justice system to identify individuals for diversion. Risk assessment uses a variety of factors, such as criminal history, to determine someone's risk of re-offending. It can also be used to identify their needs and provide direction for targeting treatment and services that can reduce recidivism. </p>
+<p><a href="http://www.ncsc.org/~/media/Microsites/Files/CSI/RNA%20Guide%20Final.ashx">Risk and needs assessment can be used at points in the criminal justice system to identify individuals for diversion, treatment, and sentencing options</a>. Risk assessment incorporates individual factors, such as criminal history, to determine the risk of re-offending. It can be used to identify an individual's mental health and/or substance abuse needs and appropriate use of treatment and services to reduce recidivism. Today, risk and needs assessments, if conducted at all, generally occur after the individual has been sentenced, providing little to no guidance on the most cost-effective and appropriate sentencing option.</p>
 
-<p>The RANA (Risk and Needs Assessment) Task Force was formed from the Crime Reduction Act of 2009 to develop plans to adopt, validate, and utilize a risk assessment tool. The use of risk assessment can inform decision making with the goal of reducing victimizations and improving the effectiveness of rehabilitative programming. Recently, a <a href="http://www.lafollette.wisc.edu/images/publications/workingpapers/cba2015-003.pdf">report detailed a cost-benefit analysis of implementing risk assessment in IDOC</a>. They found that the recidivism reductions and associated benefits from using a risk assessment tool at MSR are large enough to offset the cost of implementation. </p>
+<p>The Risk and Needs Assessment (RANA) Task Force was formed by the Crime Reduction Act of 2009 to develop plans to adopt, validate, and utilize a risk assessment tool for state prisoners. The use of risk assessment can inform decision making with the goal of reducing victimization and improving the effectiveness of rehabilitative programming. Recently, in a <a href="http://www.lafollette.wisc.edu/images/publications/workingpapers/cba2015-003.pdf">cost-benefit analysis</a> on implementing risk assessment at IDOC, researchers found that the recidivism reductions and associated benefits from using a risk assessment tool at parole are large enough to offset the cost of implementation.&nbsp;<i class="fa fa-bank" style="font-size: 14px; color: #903; vertical-align: middle; "></i> </p>
 
 
-
-<h3 id="making-informed-decisions-with-data-and-simulation">Making Informed Decisions with Data and Simulation</h3>
-
-<p>Developing a strategy to reach the 25% reduction goal may require using data and simulation models to determine if whatever methods chosen will be effective. For example, consider the possibility of solely relying on reducing admissions for the less severe felony classes (classes 3 and 4) that are not admitted on a violent offense.</p>
-
-<div class="HC_Container" style="max-width: none;">
-<div id="HC2025_Fig3"></div>
-</div>
-
-<p>The use of <a href="http://www.icjia.org/public/">bed-years</a> demonstrates that the impact of removing low-level offenders from prison has a lower impact on resource use than removing long-serving offenders. For example, if all reductions in offenders focused on low-level non-violent offenders, the reduction in bed-years would be modest. The reason for this difference is the lengths of stay: Class 4 non-violent offenders averaged less than a year in prison, whereas Class X nonviolent offenders averaged approximately 3.9 years in prison in 2013. The bed-years metric thus illustrates that six Class 4 non-violent offenders consume a similar amount of resources as one Class X non-violent offender.</p> -->
 
 
 

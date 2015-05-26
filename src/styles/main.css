@@ -448,7 +448,7 @@ button[data-filter] {background: #eee}
 button[data-filter].active {background: #F54013}
 
 .article {margin-top: 50px}
-.article-headline {margin-top: 10px; font-size: 48px; font-weight: 700; font-family: 'Oswald', sans-serif;}
+.article-headline {margin-top: 10px; font-size: 48px;   line-height: 62px; font-weight: 700; font-family: 'Oswald', sans-serif;}
 .article-authors {font-family: 'PT Mono', sans-serif; color: #999}
 .article-content {margin-top: 30px; margin-left: 25px; font-size: 22px}
 .article-date {color: #f44013; font-family: 'pt mono', serif;}
