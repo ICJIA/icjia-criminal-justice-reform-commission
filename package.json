@@ -1,48 +1,48 @@
 {
-	"name": "CJReformICJIA",
-	"version": "0.0.0",
-	"dependencies": {},
-	"devDependencies": {
-		"assemble": "~0.4.42",
-		"grunt": "~0.4.5",
-		"grunt-autoprefixer": "~2.2.0",
-		"grunt-bower-install": "~1.6.0",
-		"grunt-contrib-clean": "~0.6.0",
-		"grunt-contrib-coffee": "~0.13.0",
-		"grunt-contrib-concat": "~0.5.1",
-		"grunt-contrib-connect": "~0.9.0",
-		"grunt-contrib-copy": "~0.8.0",
-		"grunt-contrib-cssmin": "~0.12.2",
-		"grunt-contrib-htmlmin": "~0.4.0",
-		"grunt-contrib-imagemin": "^0.9.3",
-		"grunt-contrib-jshint": "~0.11.0",
-		"grunt-contrib-uglify": "~0.8.0",
-		"grunt-contrib-watch": "~0.6.1",
-		"grunt-gh-pages": "~0.10.0",
-		"grunt-mocha": "~0.4.12",
-		"grunt-modernizr": "~0.6.0",
-		"grunt-rev": "~0.1.0",
-		"grunt-rsync": "~0.6.2",
-		"grunt-shell": "~1.1.2",
-		"grunt-usemin": "~3.0.0",
-		"helper-moment": "^0.1.0",
-		"load-grunt-tasks": "~3.1.0",
-		"time-grunt": "~1.1.0",
-		"grunt-bowercopy": "^1.2.0",
-		"grunt-local-googlefont": "^0.2.0"
-	},
-	"engines": {
-		"node": ">=0.8.0"
-	},
-	"description": "ERROR: No README.md file found!",
-	"main": "Gruntfile.js",
-	"directories": {
-		"test": "test"
-	},
-	"scripts": {
-		"test": "grunt test"
-	},
-	"repository": "",
-	"author": "Christopher Schweda @ Illinois Criminal Justice Information Authority",
-	"license": "MIT"
+  "name": "CJReformICJIA",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "assemble": "~0.4.42",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "~2.2.0",
+    "grunt-bower-install": "~1.6.0",
+    "grunt-bowercopy": "^1.2.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-coffee": "~0.13.0",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-connect": "~0.9.0",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-cssmin": "~0.12.2",
+    "grunt-contrib-htmlmin": "~0.4.0",
+    "grunt-contrib-imagemin": "^0.9.3",
+    "grunt-contrib-jshint": "~0.11.0",
+    "grunt-contrib-uglify": "~0.8.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-gh-pages": "~0.10.0",
+    "grunt-local-googlefont": "^0.2.0",
+    "grunt-mocha": "~0.4.12",
+    "grunt-modernizr": "~0.6.0",
+    "grunt-rev": "~0.1.0",
+    "grunt-rsync": "~0.6.2",
+    "grunt-shell": "~1.1.2",
+    "grunt-usemin": "~3.0.0",
+    "helper-moment": "^0.1.3",
+    "load-grunt-tasks": "~3.1.0",
+    "time-grunt": "~1.1.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "description": "ERROR: No README.md file found!",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": "",
+  "author": "Christopher Schweda @ Illinois Criminal Justice Information Authority",
+  "license": "MIT"
 }
