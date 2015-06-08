@@ -34,7 +34,7 @@ function fbShare(url, title, descr, winWidth, winHeight) {
 }*/
 
 
-/* Custom function for Facebook sharewindow version 2.0 */
+/************************************** Custom function for Facebook sharewindow version 2.0 */
 
 function fbs_click(u, t) {
 	//u = location.href;
@@ -53,6 +53,12 @@ function twitter_click(t) {
 	return false;
 }
 
+
+/*********************************************************************************************/
+
+
+
+/************************************** Browser detect ***************************************/
 
 
 /**
@@ -92,6 +98,10 @@ String.prototype.capitalizeFirstLetter = function() {
 
 
 $(document).ready(function() {
+
+
+	/*********** Routines here to increase font size and filter entries on meeting page *************/
+
 
 	var clickCount = 0;
 	var direction = '+';
