@@ -1,3 +1,17 @@
+---
+layout: page.hbs
+description: "Administrative Area"
+dateCreated: 06-12-2015 14:26:23
+slug: "Enter the password"
+keywords:
+- 'ICJIA'
+- 'Illinois State Commission on Criminal Justice and Sentencing Reform'
+posted: 06-12-2015
+---
+
+
+
+
 <script>
 
 var pass=new Array()
@@ -45,20 +59,45 @@ if (verification.length!=window.max(Math.LOG10E))
 indicate=false
 if (indicate)
 window.location=verification+extension
-else
-alert("Invalid password. Please try again")
+else {
+alert("Invalid password. Please try again");
+$('#password2').val('');
+}
 }
 </script>
 
+<div class="container-fluid">
 
 
-<table border="1" cellspacing="0" cellpadding="0" bgcolor="#FFFFBD">
-  <tr>
-    <td width="100%"><form name="password1"><div align="center"><center><p><strong>Enter password: </strong><input
+  <div class="col-md-12 text-center">
+
+
+    <div style="margin-top: 150px"></div>
+
+<!-- <form name="password1"><div align="center"><center><p><strong>Enter password: </strong>
+  <input
       type="text" name="password2" size="15"><br>
       <input type="button" value="Submit" onClick="submitentry()"></p>
       </center></div>
-    </form>
-    </td>
-  </tr>
-</table>
+    </form> -->
+
+    <h1 class="article-headline" style="font-size: 30px">Enter the password</h1>
+
+    <form class="form-inline" name="password1">
+
+  <div class="form-group">
+
+    <input
+        type="text" name="password2" id="password2" size="15">
+  </div>
+  <br/><br/>
+  <input type="button" value="Submit" onClick="submitentry()">
+</form>
+
+<div style="margin-top: 450px"></div>
+
+
+
+  </div>
+
+</div>
