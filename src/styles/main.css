@@ -743,3 +743,20 @@ a[data-readmore-toggle]{
   /* ----------------------------- Highcharts ----------------------------------*/
 
   .HC_Container  {padding-top: 40px; padding-bottom: 40px;  margin: 0 auto; z-index: -1}
+
+
+
+.meeting-title {height: 40px; width: 99%; background: #f44013; color: white; padding-top: 10px; padding-bottom: 10px; font-family: 'Oswald', sans-serif;}
+.meeting-box {margin-left: 15px}
+  .meeting {
+  margin-top: 40px;
+}
+
+
+.meeting .meeting-date {
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: 14px;
+}
+
+.meeting-link {font-size: 16px; margin-left: 25px;}
