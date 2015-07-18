@@ -353,8 +353,19 @@ $(document).ready(function() {
 	$('.expander').readmore({
 		speed: 175,
 		collapsedHeight: 100,
-		moreLink: '<a href="#"><span class="expand-style">More&nbsp;<i class="fa fa-angle-double-right"></i></span></a>',
-		lessLink: '<a href="#"><span class="expand-style"><i class="fa fa-angle-double-left"></i>&nbsp;</span></a>',
+		moreLink: '<a href="#"><span class="expand-style">More&nbsp;<i class="fa fa-angle-double-down"></i></span></a>',
+		lessLink: '<a href="#"><span class="expand-style"><i class="fa fa-angle-double-up"></i>&nbsp;</span></a>',
+		afterToggle: function() {
+			progressBarInit();
+		}
+	});
+
+
+	$('.expander-lg').readmore({
+		speed: 175,
+		collapsedHeight: 180,
+		moreLink: '<a href="#"><span class="expand-style">More&nbsp;<i class="fa fa-angle-double-down"></i></span></a>',
+		lessLink: '<a href="#"><span class="expand-style"><i class="fa fa-angle-double-up"></i>&nbsp;</span></a>',
 		afterToggle: function() {
 			progressBarInit();
 		}
